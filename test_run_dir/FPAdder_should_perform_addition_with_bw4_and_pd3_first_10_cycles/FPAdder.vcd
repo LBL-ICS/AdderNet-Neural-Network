@@ -1,0 +1,304 @@
+$date
+2025-07-29T21:35+0000
+$end
+$version
+0.2
+$end
+$comment
+
+$end
+$timescale 1ns  $end
+$scope module FPAdder $end
+ $var wire 1 ! sr_valid_2 $end
+ $var wire 1 " sr_valid_1 $end
+ $var wire 1 # sr_valid_0 $end
+ $var wire 4 $ io_in_a $end
+ $var wire 4 % io_in_b $end
+ $var wire 2 & normExp $end
+ $var wire 1 ' io_valid_in $end
+ $var wire 2 ( normFracA $end
+ $var wire 2 ) normFracB $end
+ $var wire 4 * sr_data_2 $end
+ $var wire 4 + sr_data_1 $end
+ $var wire 4 , sr_data_0 $end
+ $var wire 3 - expDiff $end
+ $var wire 1 . reset $end
+ $var wire 3 / alignedLarge $end
+ $var wire 4 0 result $end
+ $var wire 1 1 carryOut $end
+ $var wire 3 2 alignedSmall $end
+ $var wire 1 3 expAGtB $end
+ $var wire 1 4 io_valid_out $end
+ $var wire 1 5 signB $end
+ $var wire 1 6 signA $end
+ $var wire 1 7 printf_7 $end
+ $var wire 1 8 printf_6 $end
+ $var wire 1 9 clock $end
+ $var wire 1 : printf_1 $end
+ $var wire 1 ; printf_5 $end
+ $var wire 3 < fracSum $end
+ $var wire 1 = printf_4 $end
+ $var wire 1 > printf_3 $end
+ $var wire 1 ? printf_2 $end
+ $var wire 4 @ io_out $end
+ $var wire 1 A fracA $end
+ $var wire 1 B fracB $end
+ $var wire 1 C printf $end
+ $var wire 2 D expOut $end
+ $var wire 3 E result_hi $end
+ $var wire 2 F expB $end
+ $var wire 2 G expA $end
+ $var wire 1 H normFrac $end
+$upscope $end
+$enddefinitions $end
+$dumpvars
+01
+03
+b0000 @
+04
+05
+b000 E
+06
+07
+08
+09
+0:
+0;
+0=
+0>
+0?
+b00 )
+0A
+b00 (
+0B
+0C
+b00 &
+b000 2
+0H
+b000 <
+b0000 $
+b0000 %
+b0000 ,
+b000 /
+b0000 *
+b0000 +
+b000 -
+0!
+0"
+b00 G
+0#
+b00 F
+b0000 0
+0'
+b00 D
+0.
+$end
+#0
+b0011 0
+11
+b010 2
+b001 E
+b01 &
+b10 (
+1H
+b10 )
+b100 <
+1.
+b010 /
+#1
+19
+b0011 ,
+#6
+1'
+09
+0.
+#11
+1#
+19
+b0011 +
+#16
+1B
+b0001 %
+b11 )
+09
+b101 <
+b011 /
+#21
+b0011 @
+1"
+19
+b0011 *
+#26
+01
+b001 2
+0B
+b01 D
+b0010 %
+b01 F
+b10 )
+09
+b011 <
+b001 -
+b010 /
+#31
+1!
+14
+19
+#36
+b0101 0
+11
+1B
+b0011 %
+b010 E
+b10 &
+b11 )
+09
+b100 <
+b011 /
+#41
+19
+b0101 ,
+#46
+01
+b000 2
+0B
+b10 D
+b0100 %
+b10 F
+b10 )
+09
+b010 <
+b010 -
+b010 /
+#51
+19
+b0101 +
+#56
+1B
+b0101 %
+b11 )
+09
+b011 <
+b011 /
+#61
+b0101 @
+19
+b0101 *
+#66
+0B
+b11 D
+b0110 %
+b011 E
+b11 &
+b11 F
+b10 )
+b011 -
+b010 /
+b0111 0
+09
+b010 <
+#71
+19
+b0111 ,
+#76
+1B
+b0111 %
+b11 )
+09
+b011 <
+b011 /
+#81
+19
+b0111 +
+#86
+0B
+b00 D
+b1000 %
+b001 E
+b01 &
+b00 F
+b10 )
+b000 -
+b010 /
+b0011 0
+11
+b010 2
+15
+09
+b100 <
+#91
+b0111 @
+19
+b0111 *
+b0011 ,
+#96
+1B
+b1001 %
+b11 )
+09
+b101 <
+b011 /
+#101
+19
+b0011 +
+#106
+0'
+09
+#111
+b0011 @
+0#
+19
+b0011 *
+#116
+09
+#121
+0"
+19
+#126
+09
+#131
+0!
+04
+19
+#136
+09
+#141
+19
+#146
+09
+#151
+19
+#156
+09
+#161
+19
+#166
+09
+#171
+19
+#176
+09
+#181
+19
+#186
+09
+#191
+19
+#196
+09
+#201
+19
+#206
+09
+#211
+19
+#216
+09
+#221
+19
+#226
+09
+#231
+19
+#236
+09

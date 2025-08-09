@@ -1,0 +1,157 @@
+$date
+2025-07-24T18:28+0000
+$end
+$version
+0.2
+$end
+$comment
+
+$end
+$timescale 1ns  $end
+$scope module SAD $end
+ $var wire 1 # io_valid_in $end
+ $var wire 6 ( absDiffs_2 $end
+ $var wire 6 ) absDiffs_1 $end
+ $var wire 6 * absDiffs_0 $end
+ $var wire 1 / reset $end
+ $var wire 6 0 absDiffs_3 $end
+ $var wire 5 1 io_a_3 $end
+ $var wire 5 2 io_a_0 $end
+ $var wire 5 4 io_a_2 $end
+ $var wire 5 5 io_a_1 $end
+ $var wire 1 9 adderTree $end
+ $var wire 1 > validRegs_0 $end
+ $var wire 1 ? validRegs_1 $end
+ $var wire 1 @ validRegs_2 $end
+ $var wire 5 C io_b_3 $end
+ $var wire 5 D io_b_2 $end
+ $var wire 5 E io_b_1 $end
+ $var wire 5 F io_b_0 $end
+ $var wire 1 G io_valid_out $end
+ $var wire 1 J clock $end
+ $var wire 10 O io_sum $end
+ $var wire 1 R absvals_2 $end
+ $var wire 1 S absvals_1 $end
+ $var wire 1 T absvals_0 $end
+ $var wire 1 U subtractors_3 $end
+ $var wire 1 V absvals_3 $end
+ $var wire 1 X subtractors_0 $end
+ $var wire 1 Y subtractors_1 $end
+ $var wire 1 Z subtractors_2 $end
+  $scope module absvals_2 $end
+   $var wire 6 K io_out $end
+   $var wire 6 W io_in $end
+  $upscope $end
+  $scope module absvals_1 $end
+   $var wire 6 ; io_out $end
+   $var wire 6 N io_in $end
+  $upscope $end
+  $scope module subtractors_0 $end
+   $var wire 6 , io_diff $end
+   $var wire 5 A io_b $end
+   $var wire 5 B io_a $end
+  $upscope $end
+  $scope module absvals_0 $end
+   $var wire 6 ' io_in $end
+   $var wire 6 L io_out $end
+  $upscope $end
+  $scope module subtractors_1 $end
+   $var wire 5 ! io_b $end
+   $var wire 5 " io_a $end
+   $var wire 6 : io_diff $end
+  $upscope $end
+  $scope module adderTree $end
+   $var wire 1 - clock $end
+   $var wire 8 . io_out_pairs_0_1 $end
+   $var wire 6 3 io_in_3 $end
+   $var wire 6 6 io_in_0 $end
+   $var wire 6 7 io_in_1 $end
+   $var wire 6 8 io_in_2 $end
+   $var wire 7 H io_out_pairs_0 $end
+   $var wire 7 I io_out_pairs_1 $end
+   $var wire 8 M io_out $end
+  $upscope $end
+  $scope module subtractors_2 $end
+   $var wire 5 $ io_b $end
+   $var wire 5 % io_a $end
+   $var wire 6 P io_diff $end
+  $upscope $end
+  $scope module subtractors_3 $end
+   $var wire 6 + io_diff $end
+   $var wire 5 < io_a $end
+   $var wire 5 = io_b $end
+  $upscope $end
+  $scope module absvals_3 $end
+   $var wire 6 & io_in $end
+   $var wire 6 Q io_out $end
+  $upscope $end
+$upscope $end
+$enddefinitions $end
+$dumpvars
+09
+0>
+b00000 !
+0?
+0@
+b00000 "
+b00000 %
+b00000 $
+0G
+0J
+b00000 1
+b000000 W
+b00000 2
+0R
+b00000 5
+b00000000 M
+0S
+b00000 4
+0T
+0U
+0V
+0X
+0Y
+b000000 N
+0Z
+b00000 =
+b000000 Q
+b00000 <
+b000000 P
+b00000 A
+b00000 C
+b00000 B
+b00000 E
+b00000 D
+b000000 K
+b00000 F
+b000000 L
+b000000 7
+b000000 6
+b000000 8
+b000000 ;
+b000000 :
+b000000 0
+b000000 3
+b0000000 I
+b0000000 H
+b000000 '
+b000000 &
+b000000 )
+b000000 (
+b000000 +
+b000000 *
+b000000 ,
+b00000000 .
+b0000000000 O
+0#
+0-
+0/
+$end
+#0
+1/
+#1
+1J
+1-
+#6
+0J
+0/

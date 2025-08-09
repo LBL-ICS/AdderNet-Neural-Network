@@ -1,0 +1,228 @@
+$date
+2025-07-28T22:33+0000
+$end
+$version
+0.2
+$end
+$comment
+
+$end
+$timescale 1ns  $end
+$scope module FPAdder $end
+ $var wire 2 ! baseA $end
+ $var wire 1 " sr_valid_0 $end
+ $var wire 4 # sr_b_0 $end
+ $var wire 2 $ baseB $end
+ $var wire 4 % io_in_a $end
+ $var wire 4 & io_in_b $end
+ $var wire 2 ' normExp $end
+ $var wire 1 ( io_valid_in $end
+ $var wire 1 ) io_valid_out $end
+ $var wire 1 * clock $end
+ $var wire 2 + alignedFracB $end
+ $var wire 2 , alignedFracA $end
+ $var wire 1 - shiftAmount $end
+ $var wire 1 . reset $end
+ $var wire 4 / io_out $end
+ $var wire 1 0 aBigger $end
+ $var wire 1 1 fracA $end
+ $var wire 2 2 commonExp $end
+ $var wire 4 3 sr_a_0 $end
+ $var wire 1 4 fracB $end
+ $var wire 3 5 sum $end
+ $var wire 2 6 expB $end
+ $var wire 2 7 expA $end
+ $var wire 1 8 normFrac $end
+$upscope $end
+$enddefinitions $end
+$dumpvars
+00
+01
+b00 7
+b00 6
+04
+08
+b00 2
+b00 '
+b00 ,
+b000 5
+b00 +
+b00 !
+b00 $
+b0000 %
+b0000 #
+b0000 &
+0"
+b0000 3
+b0000 /
+0(
+0)
+0*
+0-
+0.
+$end
+#0
+10
+b10 !
+b10 $
+b100 5
+b01 '
+b10 +
+b10 ,
+1.
+b0010 /
+#1
+1*
+#6
+1(
+0*
+0.
+#11
+1"
+1)
+1*
+#16
+b0001 &
+0*
+#21
+b0001 #
+b11 $
+14
+b101 5
+1*
+b11 +
+#26
+b0010 &
+0*
+#31
+b0010 #
+b10 $
+1*
+b10 +
+b01 ,
+1-
+b0011 /
+00
+b01 2
+04
+b011 5
+b01 6
+18
+#36
+b0011 &
+0*
+#41
+b0011 #
+b11 $
+14
+b100 5
+b10 '
+08
+1*
+b11 +
+b0100 /
+#46
+b0100 &
+0*
+#51
+b10 2
+b0100 #
+b10 $
+04
+b10 6
+b11 '
+1*
+b10 +
+b10 ,
+0-
+b0110 /
+#56
+b0101 &
+0*
+#61
+b0101 #
+b11 $
+14
+b101 5
+1*
+b11 +
+#66
+b0110 &
+0*
+#71
+b0110 #
+b10 $
+1*
+b10 +
+b01 ,
+1-
+b0111 /
+b11 2
+04
+b011 5
+b11 6
+18
+#76
+b0111 &
+0*
+#81
+b0111 #
+b11 $
+14
+b100 5
+b00 '
+08
+1*
+b11 +
+b0000 /
+#86
+b1000 &
+0*
+#91
+b1000 #
+b10 $
+b01 '
+1*
+b10 +
+b10 ,
+0-
+b0010 /
+10
+b00 2
+04
+b00 6
+#96
+b1001 &
+0*
+#101
+b1001 #
+b11 $
+14
+b101 5
+1*
+b11 +
+#106
+0(
+0*
+#111
+0"
+0)
+1*
+#116
+0*
+#121
+1*
+#126
+0*
+#131
+1*
+#136
+0*
+#141
+1*
+#146
+0*
+#151
+1*
+#156
+0*

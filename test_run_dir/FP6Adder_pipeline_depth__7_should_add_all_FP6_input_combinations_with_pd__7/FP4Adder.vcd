@@ -1,0 +1,345 @@
+$date
+2025-07-17T21:53+0000
+$end
+$version
+0.2
+$end
+$comment
+
+$end
+$timescale 1ns  $end
+$scope module FP4Adder $end
+ $var wire 1 ! a_bigger $end
+ $var wire 4 " shifted_man $end
+ $var wire 1 # io_out_valid $end
+ $var wire 3 $ adjusted_exp $end
+ $var wire 5 % aligned_b $end
+ $var wire 3 & norm_man $end
+ $var wire 5 ' aligned_a $end
+ $var wire 1 ( reset $end
+ $var wire 1 ) io_in_valid $end
+ $var wire 5 * result $end
+ $var wire 2 + norm_exp $end
+ $var wire 2 , b_exp $end
+ $var wire 3 - man $end
+ $var wire 4 . a_full $end
+ $var wire 5 / io_out_r_4 $end
+ $var wire 5 0 io_out_r_3 $end
+ $var wire 5 1 io_out_r_5 $end
+ $var wire 5 2 io_out_r_2 $end
+ $var wire 5 3 io_out_r_1 $end
+ $var wire 2 4 aligned_exp $end
+ $var wire 3 5 man_1 $end
+ $var wire 1 6 clock $end
+ $var wire 2 7 exp_diff $end
+ $var wire 1 8 io_out_valid_r $end
+ $var wire 6 9 io_b $end
+ $var wire 6 : io_a $end
+ $var wire 2 ; a_exp $end
+ $var wire 6 < io_out $end
+ $var wire 5 = sum_full $end
+ $var wire 3 > shift_amt $end
+ $var wire 1 ? io_out_valid_r_1 $end
+ $var wire 1 @ io_out_valid_r_2 $end
+ $var wire 1 A io_out_valid_r_3 $end
+ $var wire 1 B io_out_valid_r_4 $end
+ $var wire 1 C io_out_valid_r_5 $end
+ $var wire 4 D b_full $end
+ $var wire 1 E io_in_en $end
+ $var wire 5 F io_out_r $end
+$upscope $end
+$enddefinitions $end
+$dumpvars
+b0000 D
+b00 7
+b000000 9
+b000000 :
+06
+b00 ;
+b000000 <
+08
+b00 4
+0?
+0@
+0A
+0B
+b00000 %
+0C
+b00000 '
+0E
+b00 ,
+b000 5
+b00 +
+b000 >
+b00000 *
+b00000 /
+b00000 1
+b00000 0
+b00000 3
+b000 &
+b00000 2
+b0000 "
+b000 $
+b00000 =
+b000 -
+0!
+0#
+b00000 F
+b0000 .
+0(
+0)
+$end
+#0
+1!
+b1000 "
+b1000 D
+b01000 %
+b100 &
+b01000 '
+1(
+b01100 *
+b01 +
+b10000 =
+b1000 .
+#1
+16
+#6
+1E
+06
+0(
+1)
+#11
+16
+b01100 F
+18
+#16
+0E
+06
+0)
+#21
+16
+#26
+06
+#31
+16
+#36
+06
+#41
+16
+#46
+06
+#51
+16
+#56
+06
+#61
+16
+#66
+06
+#71
+16
+#76
+b1001 D
+b01001 %
+b001 5
+1E
+06
+1)
+b000001 9
+b10001 =
+#81
+b01100 3
+16
+1?
+#86
+0E
+06
+0)
+#91
+16
+#96
+06
+#101
+16
+#106
+06
+#111
+16
+#116
+06
+#121
+16
+#126
+06
+#131
+16
+#136
+06
+#141
+16
+#146
+b1001 "
+b1010 D
+b01010 %
+b010 5
+1E
+06
+1)
+b000010 9
+b10010 =
+#151
+1@
+b01100 2
+16
+#156
+0E
+06
+0)
+#161
+16
+#166
+06
+#171
+16
+#176
+06
+#181
+16
+#186
+06
+#191
+16
+#196
+06
+#201
+16
+#206
+06
+#211
+16
+#216
+b1011 D
+b01011 %
+b011 5
+1E
+06
+1)
+b000011 9
+b10011 =
+#221
+b01100 0
+1A
+16
+#226
+0E
+06
+0)
+#231
+16
+#236
+06
+#241
+16
+#246
+06
+#251
+16
+#256
+06
+#261
+16
+#266
+06
+#271
+16
+#276
+06
+#281
+16
+#286
+b1010 "
+b1100 D
+b01100 %
+b100 5
+1E
+b101 &
+06
+1)
+b000100 9
+b01101 *
+b10100 =
+#291
+1B
+16
+b01101 F
+b01100 /
+#296
+0E
+06
+0)
+#301
+16
+#306
+06
+#311
+16
+#316
+06
+#321
+16
+#326
+06
+#331
+16
+#336
+06
+#341
+16
+#346
+06
+#351
+16
+#356
+b1101 D
+b01101 %
+b101 5
+1E
+06
+1)
+b000101 9
+b10101 =
+#361
+b01100 1
+1#
+b01101 3
+1C
+16
+b001100 <
+#366
+0E
+06
+0)
+#371
+16
+#376
+06
+#381
+16
+#386
+06
+#391
+16
+#396
+06
+#401
+16
+#406
+06
+#411
+16
+#416
+06
+#421
+16
+#426
+06

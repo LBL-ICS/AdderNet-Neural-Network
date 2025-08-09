@@ -1,0 +1,77 @@
+[0m[[0m[0mdebug[0m] [0m[0mPackaging C:\Users\josea\OneDrive\Desktop\REU Project Working\Chisel-for-Fundamental-IC\target\scala-2.13\fundamental-ic-chiselhcl_2.13-0.1.0-SNAPSHOT.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Fundamental_IC[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\josea\OneDrive\Desktop\REU Project Working\Chisel-for-Fundamental-IC\target\scala-2.13\classes\Fundamental_IC[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Fundamental_IC\adder$$anon$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\josea\OneDrive\Desktop\REU Project Working\Chisel-for-Fundamental-IC\target\scala-2.13\classes\Fundamental_IC\adder$$anon$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Fundamental_IC\adder.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\josea\OneDrive\Desktop\REU Project Working\Chisel-for-Fundamental-IC\target\scala-2.13\classes\Fundamental_IC\adder.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Fundamental_IC\asyn_ram$$anon$10.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\josea\OneDrive\Desktop\REU Project Working\Chisel-for-Fundamental-IC\target\scala-2.13\classes\Fundamental_IC\asyn_ram$$anon$10.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Fundamental_IC\asyn_ram.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\josea\OneDrive\Desktop\REU Project Working\Chisel-for-Fundamental-IC\target\scala-2.13\classes\Fundamental_IC\asyn_ram.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Fundamental_IC\counter$$anon$6.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\josea\OneDrive\Desktop\REU Project Working\Chisel-for-Fundamental-IC\target\scala-2.13\classes\Fundamental_IC\counter$$anon$6.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Fundamental_IC\counter.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\josea\OneDrive\Desktop\REU Project Working\Chisel-for-Fundamental-IC\target\scala-2.13\classes\Fundamental_IC\counter.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Fundamental_IC\FPAdder$$anon$14.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\josea\OneDrive\Desktop\REU Project Working\Chisel-for-Fundamental-IC\target\scala-2.13\classes\Fundamental_IC\FPAdder$$anon$14.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Fundamental_IC\FPAdder.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\josea\OneDrive\Desktop\REU Project Working\Chisel-for-Fundamental-IC\target\scala-2.13\classes\Fundamental_IC\FPAdder.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Fundamental_IC\FPSubtractorAbs$$anon$15.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\josea\OneDrive\Desktop\REU Project Working\Chisel-for-Fundamental-IC\target\scala-2.13\classes\Fundamental_IC\FPSubtractorAbs$$anon$15.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Fundamental_IC\FPSubtractorAbs.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\josea\OneDrive\Desktop\REU Project Working\Chisel-for-Fundamental-IC\target\scala-2.13\classes\Fundamental_IC\FPSubtractorAbs.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Fundamental_IC\LZC$$anon$13.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\josea\OneDrive\Desktop\REU Project Working\Chisel-for-Fundamental-IC\target\scala-2.13\classes\Fundamental_IC\LZC$$anon$13.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Fundamental_IC\LZC.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\josea\OneDrive\Desktop\REU Project Working\Chisel-for-Fundamental-IC\target\scala-2.13\classes\Fundamental_IC\LZC.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Fundamental_IC\Main$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\josea\OneDrive\Desktop\REU Project Working\Chisel-for-Fundamental-IC\target\scala-2.13\classes\Fundamental_IC\Main$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Fundamental_IC\Main$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\josea\OneDrive\Desktop\REU Project Working\Chisel-for-Fundamental-IC\target\scala-2.13\classes\Fundamental_IC\Main$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Fundamental_IC\Main.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\josea\OneDrive\Desktop\REU Project Working\Chisel-for-Fundamental-IC\target\scala-2.13\classes\Fundamental_IC\Main.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Fundamental_IC\mux$$anon$7.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\josea\OneDrive\Desktop\REU Project Working\Chisel-for-Fundamental-IC\target\scala-2.13\classes\Fundamental_IC\mux$$anon$7.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Fundamental_IC\mux.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\josea\OneDrive\Desktop\REU Project Working\Chisel-for-Fundamental-IC\target\scala-2.13\classes\Fundamental_IC\mux.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Fundamental_IC\mux_ifelse$$anon$8.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\josea\OneDrive\Desktop\REU Project Working\Chisel-for-Fundamental-IC\target\scala-2.13\classes\Fundamental_IC\mux_ifelse$$anon$8.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Fundamental_IC\mux_ifelse.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\josea\OneDrive\Desktop\REU Project Working\Chisel-for-Fundamental-IC\target\scala-2.13\classes\Fundamental_IC\mux_ifelse.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Fundamental_IC\parallel_adder$$anon$3.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\josea\OneDrive\Desktop\REU Project Working\Chisel-for-Fundamental-IC\target\scala-2.13\classes\Fundamental_IC\parallel_adder$$anon$3.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Fundamental_IC\parallel_adder.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\josea\OneDrive\Desktop\REU Project Working\Chisel-for-Fundamental-IC\target\scala-2.13\classes\Fundamental_IC\parallel_adder.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Fundamental_IC\PipelineReg$$anon$12.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\josea\OneDrive\Desktop\REU Project Working\Chisel-for-Fundamental-IC\target\scala-2.13\classes\Fundamental_IC\PipelineReg$$anon$12.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Fundamental_IC\PipelineReg.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\josea\OneDrive\Desktop\REU Project Working\Chisel-for-Fundamental-IC\target\scala-2.13\classes\Fundamental_IC\PipelineReg.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Fundamental_IC\register$$anon$5.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\josea\OneDrive\Desktop\REU Project Working\Chisel-for-Fundamental-IC\target\scala-2.13\classes\Fundamental_IC\register$$anon$5.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Fundamental_IC\register.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\josea\OneDrive\Desktop\REU Project Working\Chisel-for-Fundamental-IC\target\scala-2.13\classes\Fundamental_IC\register.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Fundamental_IC\register_file$$anon$4.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\josea\OneDrive\Desktop\REU Project Working\Chisel-for-Fundamental-IC\target\scala-2.13\classes\Fundamental_IC\register_file$$anon$4.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Fundamental_IC\register_file.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\josea\OneDrive\Desktop\REU Project Working\Chisel-for-Fundamental-IC\target\scala-2.13\classes\Fundamental_IC\register_file.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Fundamental_IC\SAD$$anon$16.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\josea\OneDrive\Desktop\REU Project Working\Chisel-for-Fundamental-IC\target\scala-2.13\classes\Fundamental_IC\SAD$$anon$16.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Fundamental_IC\SAD$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\josea\OneDrive\Desktop\REU Project Working\Chisel-for-Fundamental-IC\target\scala-2.13\classes\Fundamental_IC\SAD$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Fundamental_IC\SAD.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\josea\OneDrive\Desktop\REU Project Working\Chisel-for-Fundamental-IC\target\scala-2.13\classes\Fundamental_IC\SAD.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Fundamental_IC\shift_register$$anon$11.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\josea\OneDrive\Desktop\REU Project Working\Chisel-for-Fundamental-IC\target\scala-2.13\classes\Fundamental_IC\shift_register$$anon$11.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Fundamental_IC\shift_register.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\josea\OneDrive\Desktop\REU Project Working\Chisel-for-Fundamental-IC\target\scala-2.13\classes\Fundamental_IC\shift_register.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Fundamental_IC\syn_ram$$anon$9.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\josea\OneDrive\Desktop\REU Project Working\Chisel-for-Fundamental-IC\target\scala-2.13\classes\Fundamental_IC\syn_ram$$anon$9.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Fundamental_IC\syn_ram.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\josea\OneDrive\Desktop\REU Project Working\Chisel-for-Fundamental-IC\target\scala-2.13\classes\Fundamental_IC\syn_ram.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Fundamental_IC\wire_connection$$anon$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\josea\OneDrive\Desktop\REU Project Working\Chisel-for-Fundamental-IC\target\scala-2.13\classes\Fundamental_IC\wire_connection$$anon$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Fundamental_IC\wire_connection.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\josea\OneDrive\Desktop\REU Project Working\Chisel-for-Fundamental-IC\target\scala-2.13\classes\Fundamental_IC\wire_connection.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mDone packaging.[0m

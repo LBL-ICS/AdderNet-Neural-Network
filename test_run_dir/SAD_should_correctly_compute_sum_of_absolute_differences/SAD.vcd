@@ -1,0 +1,1365 @@
+$date
+2025-07-25T04:12+0000
+$end
+$version
+0.2
+$end
+$comment
+
+$end
+$timescale 1ns  $end
+$scope module SAD $end
+ $var wire 4 J io_bVec_2 $end
+ $var wire 4 L io_bVec_3 $end
+ $var wire 4 N io_bVec_0 $end
+ $var wire 4 O io_bVec_1 $end
+ $var wire 1 Z io_valid_out $end
+ $var wire 4 p io_aVec_0 $end
+ $var wire 4 q io_aVec_2 $end
+ $var wire 4 r io_aVec_1 $end
+ $var wire 1 s io_valid_in $end
+ $var wire 4 z io_aVec_3 $end
+ $var wire 1 "; clock $end
+ $var wire 4 "B io_out $end
+ $var wire 1 "Z absDiffs_2 $end
+ $var wire 1 "[ absDiffs_1 $end
+ $var wire 1 "^ absDiffs_0 $end
+ $var wire 1 "j absDiffs_3 $end
+ $var wire 1 #' sumsAndValids_adder_2 $end
+ $var wire 1 #+ sumsAndValids_adder_1 $end
+ $var wire 1 #B reset $end
+ $var wire 1 #C sumsAndValids_adder $end
+  $scope module absDiffs_2 $end
+   $var wire 4 % aVal $end
+   $var wire 3 * alignedB $end
+   $var wire 3 + alignedA $end
+   $var wire 1 < valid_sr_0 $end
+   $var wire 1 = valid_sr_1 $end
+   $var wire 1 > valid_sr_2 $end
+   $var wire 4 I bVal $end
+   $var wire 2 T expB_ $end
+   $var wire 2 Y aExt_hi $end
+   $var wire 2 \ expA_ $end
+   $var wire 4 _ io_b $end
+   $var wire 4 a io_a $end
+   $var wire 1 b lzc $end
+   $var wire 3 v aExt $end
+   $var wire 1 "! manB $end
+   $var wire 1 "" manA $end
+   $var wire 3 ". bExt $end
+   $var wire 1 "3 io_valid_out $end
+   $var wire 1 "7 clock $end
+   $var wire 1 "S normalizedMant $end
+   $var wire 3 "] result $end
+   $var wire 1 "h reset $end
+   $var wire 4 "w sr_array_0 $end
+   $var wire 4 "x sr_array_2 $end
+   $var wire 4 "y sr_array_1 $end
+   $var wire 2 "{ expDiff $end
+   $var wire 4 #" io_out $end
+   $var wire 1 #- io_valid_in $end
+   $var wire 2 #6 bExt_hi $end
+   $var wire 3 #@ diff $end
+   $var wire 2 #A adjustedExp $end
+   $var wire 6 #Q normalizedMantFull $end
+   $var wire 2 #f maxExp $end
+    $scope module lzc $end
+     $var wire 3 "< io_in $end
+     $var wire 2 #g io_out $end
+    $upscope $end
+  $upscope $end
+  $scope module absDiffs_1 $end
+   $var wire 2 ( maxExp $end
+   $var wire 1 C normalizedMant $end
+   $var wire 4 D sr_array_1 $end
+   $var wire 4 E sr_array_0 $end
+   $var wire 4 G sr_array_2 $end
+   $var wire 3 W bExt $end
+   $var wire 3 f aExt $end
+   $var wire 1 m manB $end
+   $var wire 1 n manA $end
+   $var wire 1 { lzc $end
+   $var wire 6 "/ normalizedMantFull $end
+   $var wire 2 "C expDiff $end
+   $var wire 1 "E io_valid_in $end
+   $var wire 3 "O result $end
+   $var wire 1 "T clock $end
+   $var wire 2 "X expA_ $end
+   $var wire 2 "b expB_ $end
+   $var wire 1 "e valid_sr_1 $end
+   $var wire 1 "g valid_sr_2 $end
+   $var wire 1 "i valid_sr_0 $end
+   $var wire 1 "k io_valid_out $end
+   $var wire 4 "n io_b $end
+   $var wire 4 "o io_a $end
+   $var wire 3 #/ diff $end
+   $var wire 2 #> adjustedExp $end
+   $var wire 2 #? bExt_hi $end
+   $var wire 2 #H aExt_hi $end
+   $var wire 3 #I alignedB $end
+   $var wire 3 #J alignedA $end
+   $var wire 1 #P reset $end
+   $var wire 4 #R bVal $end
+   $var wire 4 #S io_out $end
+   $var wire 4 #c aVal $end
+    $scope module lzc $end
+     $var wire 2 j io_out $end
+     $var wire 3 "2 io_in $end
+    $upscope $end
+  $upscope $end
+  $scope module absDiffs_0 $end
+   $var wire 1 $ normalizedMant $end
+   $var wire 3 ' result $end
+   $var wire 2 F bExt_hi $end
+   $var wire 2 Q expDiff $end
+   $var wire 1 U valid_sr_0 $end
+   $var wire 1 V valid_sr_1 $end
+   $var wire 1 X valid_sr_2 $end
+   $var wire 4 [ io_out $end
+   $var wire 2 e expB_ $end
+   $var wire 2 i expA_ $end
+   $var wire 2 x adjustedExp $end
+   $var wire 3 ~ diff $end
+   $var wire 4 "' sr_array_0 $end
+   $var wire 4 ") sr_array_1 $end
+   $var wire 4 ", sr_array_2 $end
+   $var wire 2 "- maxExp $end
+   $var wire 1 "5 lzc $end
+   $var wire 1 "D clock $end
+   $var wire 4 "F io_a $end
+   $var wire 4 "G io_b $end
+   $var wire 4 "N bVal $end
+   $var wire 1 "W io_valid_out $end
+   $var wire 2 "f aExt_hi $end
+   $var wire 4 "l aVal $end
+   $var wire 6 "s normalizedMantFull $end
+   $var wire 1 #$ manB $end
+   $var wire 1 #% manA $end
+   $var wire 1 #, io_valid_in $end
+   $var wire 3 #0 bExt $end
+   $var wire 3 #7 alignedA $end
+   $var wire 3 #8 alignedB $end
+   $var wire 3 #F aExt $end
+   $var wire 1 #b reset $end
+    $scope module lzc $end
+     $var wire 2 "M io_out $end
+     $var wire 3 "q io_in $end
+    $upscope $end
+  $upscope $end
+  $scope module absDiffs_0.lzc $end
+  $upscope $end
+  $scope module absDiffs_2.lzc $end
+  $upscope $end
+  $scope module sumsAndValids_adder_2.lzc $end
+  $upscope $end
+  $scope module sumsAndValids_adder_2 $end
+   $var wire 4 - io_b $end
+   $var wire 4 . io_a $end
+   $var wire 1 ? io_valid_in $end
+   $var wire 1 H valid_sr_2 $end
+   $var wire 1 K valid_sr_1 $end
+   $var wire 1 M valid_sr_0 $end
+   $var wire 11 P normalizedMantFull $end
+   $var wire 2 ^ aExt_hi $end
+   $var wire 2 o bExt_hi $end
+   $var wire 3 t bExt $end
+   $var wire 3 "$ alignedA $end
+   $var wire 3 "% alignedB $end
+   $var wire 4 "( sum $end
+   $var wire 3 "6 adjustedExp $end
+   $var wire 4 "= result $end
+   $var wire 3 "> aExt $end
+   $var wire 1 "J manB $end
+   $var wire 1 "K manA $end
+   $var wire 1 "Q reset $end
+   $var wire 1 "V io_valid_out $end
+   $var wire 2 "Y maxExp $end
+   $var wire 2 "t expA $end
+   $var wire 2 "u expB $end
+   $var wire 1 "~ normalizedMant $end
+   $var wire 4 #( sr_array_0 $end
+   $var wire 4 #) sr_array_1 $end
+   $var wire 4 #* sr_array_2 $end
+   $var wire 2 #4 expDiff $end
+   $var wire 1 #T lzc $end
+   $var wire 4 #\ io_out $end
+   $var wire 1 #e clock $end
+    $scope module lzc $end
+     $var wire 4 "` io_in $end
+     $var wire 3 #& io_out $end
+    $upscope $end
+  $upscope $end
+  $scope module sumsAndValids_adder.lzc $end
+  $upscope $end
+  $scope module absDiffs_1.lzc $end
+  $upscope $end
+  $scope module sumsAndValids_adder_1 $end
+   $var wire 3 " bExt $end
+   $var wire 1 & lzc $end
+   $var wire 2 , expDiff $end
+   $var wire 2 / bExt_hi $end
+   $var wire 1 3 manA $end
+   $var wire 1 4 manB $end
+   $var wire 1 @ io_valid_in $end
+   $var wire 3 B aExt $end
+   $var wire 2 ` expA $end
+   $var wire 2 c expB $end
+   $var wire 3 k alignedA $end
+   $var wire 3 l alignedB $end
+   $var wire 2 y maxExp $end
+   $var wire 11 "1 normalizedMantFull $end
+   $var wire 1 "9 reset $end
+   $var wire 4 "I sum $end
+   $var wire 1 "d normalizedMant $end
+   $var wire 2 "r aExt_hi $end
+   $var wire 4 "v result $end
+   $var wire 1 "z valid_sr_2 $end
+   $var wire 1 "| valid_sr_1 $end
+   $var wire 1 "} valid_sr_0 $end
+   $var wire 3 #! adjustedExp $end
+   $var wire 4 #. io_out $end
+   $var wire 4 #3 io_a $end
+   $var wire 4 #5 io_b $end
+   $var wire 1 #; clock $end
+   $var wire 4 #D sr_array_2 $end
+   $var wire 4 #E sr_array_1 $end
+   $var wire 4 #G sr_array_0 $end
+   $var wire 1 #] io_valid_out $end
+    $scope module lzc $end
+     $var wire 4 # io_in $end
+     $var wire 3 #[ io_out $end
+    $upscope $end
+  $upscope $end
+  $scope module sumsAndValids_adder $end
+   $var wire 3 ) aExt $end
+   $var wire 1 1 manA $end
+   $var wire 1 2 manB $end
+   $var wire 1 6 io_valid_out $end
+   $var wire 2 g expA $end
+   $var wire 2 h expB $end
+   $var wire 11 w normalizedMantFull $end
+   $var wire 2 } bExt_hi $end
+   $var wire 1 "& lzc $end
+   $var wire 3 "4 bExt $end
+   $var wire 2 "8 maxExp $end
+   $var wire 2 ": aExt_hi $end
+   $var wire 3 "? alignedB $end
+   $var wire 3 "@ alignedA $end
+   $var wire 4 "L io_out $end
+   $var wire 3 "P adjustedExp $end
+   $var wire 1 "R reset $end
+   $var wire 1 "p normalizedMant $end
+   $var wire 4 #1 io_b $end
+   $var wire 4 #2 io_a $end
+   $var wire 1 #= clock $end
+   $var wire 4 #K result $end
+   $var wire 2 #U expDiff $end
+   $var wire 4 #V sum $end
+   $var wire 1 #W valid_sr_1 $end
+   $var wire 1 #X valid_sr_0 $end
+   $var wire 1 #Y valid_sr_2 $end
+   $var wire 4 #^ sr_array_0 $end
+   $var wire 4 #` sr_array_1 $end
+   $var wire 4 #a sr_array_2 $end
+   $var wire 1 #d io_valid_in $end
+    $scope module lzc $end
+     $var wire 3 5 io_out $end
+     $var wire 4 "c io_in $end
+    $upscope $end
+  $upscope $end
+  $scope module sumsAndValids_adder_1.lzc $end
+  $upscope $end
+  $scope module absDiffs_3 $end
+   $var wire 3 ! diff $end
+   $var wire 1 0 reset $end
+   $var wire 4 7 sr_array_2 $end
+   $var wire 4 8 sr_array_1 $end
+   $var wire 2 9 expDiff $end
+   $var wire 4 : sr_array_0 $end
+   $var wire 1 ; clock $end
+   $var wire 1 A lzc $end
+   $var wire 4 R io_a $end
+   $var wire 4 S io_b $end
+   $var wire 4 ] bVal $end
+   $var wire 1 u normalizedMant $end
+   $var wire 2 | adjustedExp $end
+   $var wire 1 "* io_valid_out $end
+   $var wire 2 "+ expB_ $end
+   $var wire 2 "0 expA_ $end
+   $var wire 2 "A bExt_hi $end
+   $var wire 2 "H aExt_hi $end
+   $var wire 3 "U aExt $end
+   $var wire 1 "\ manA $end
+   $var wire 1 "_ manB $end
+   $var wire 2 "a maxExp $end
+   $var wire 6 "m normalizedMantFull $end
+   $var wire 4 ## io_out $end
+   $var wire 4 #9 aVal $end
+   $var wire 3 #: alignedB $end
+   $var wire 3 #< alignedA $end
+   $var wire 3 #L result $end
+   $var wire 1 #M valid_sr_0 $end
+   $var wire 1 #N valid_sr_2 $end
+   $var wire 1 #O valid_sr_1 $end
+   $var wire 3 #Z bExt $end
+   $var wire 1 #_ io_valid_in $end
+    $scope module lzc $end
+     $var wire 2 d io_out $end
+     $var wire 3 "# io_in $end
+    $upscope $end
+  $upscope $end
+  $scope module absDiffs_3.lzc $end
+  $upscope $end
+$upscope $end
+$enddefinitions $end
+$dumpvars
+00
+b00 9
+01
+b0000 #E
+02
+03
+b0000 #G
+04
+06
+b0000 #K
+b0000 "l
+b0000 "o
+b00 /
+0;
+b0000 "n
+0<
+b0000 #R
+0=
+0>
+0?
+b0000 #S
+0@
+b0000 #V
+0A
+b00 (
+b0000 "w
+0C
+b0000 "v
+b0000 "y
+b0000 "x
+b00 ,
+b0000 #\
+0H
+b0000 #^
+b0000 #`
+0K
+0M
+b0000 #a
+b0000 #c
+b0000 %
+b0000 #
+0U
+0V
+0X
+b0000 -
+0Z
+0b
+b0000 .
+b0000 :
+b0000 8
+0m
+0n
+b0000 7
+0s
+0u
+0{
+b00 #f
+b00 #g
+b00 "{
+b00 "u
+b00 "t
+b00 #U
+0"!
+0""
+b000000 "m
+0"&
+b000000 #Q
+b00 #H
+b00 "f
+b000000 "s
+0"*
+b00 "r
+b00 "Y
+b00 "X
+0"3
+0"5
+b00 #6
+0"7
+0"9
+b00 "a
+b00 #A
+0";
+b00 "b
+b00 #>
+b00 #?
+b00 "H
+b000 v
+0#$
+0"D
+0#%
+0"E
+0#'
+b000 t
+0"J
+0#+
+b000 ~
+0"K
+0#,
+b00 #4
+0#-
+b00 "M
+0"Q
+0"R
+b00 "8
+b000 f
+0"S
+0"T
+b00 ":
+0"V
+0"W
+b00 "A
+0"Z
+0#;
+0"[
+b00 "C
+0"\
+0#=
+b000 k
+0"^
+0"_
+b000 l
+0#B
+b000 W
+0#C
+b00 "+
+0"d
+0"e
+b000000 "/
+0"g
+0"h
+0"i
+0"j
+b00 "0
+0"k
+0#M
+0#N
+b00 "-
+0#O
+0#P
+0"p
+b00 y
+0#T
+b00 x
+0#W
+b00 }
+b000 B
+0#X
+b00 |
+0#Y
+0"z
+0"|
+0#]
+b00 o
+0"}
+0"~
+0#_
+0#b
+b00 i
+0#d
+b00 h
+0#e
+b00 g
+b000 5
+b00 j
+b00 `
+b00 ^
+b00 e
+b00 d
+b00 c
+b000 '
+b00 Y
+b000 )
+b000 "
+b00 \
+b00 Q
+b000 +
+b000 *
+b00 T
+b00 F
+b000 !
+b00000000000 w
+b00000000000 P
+b000 #7
+b000 #8
+b000 "U
+b000 "P
+b000 #@
+b000 "]
+b000 #<
+b000 #:
+b000 #F
+b000 #L
+b000 #I
+b000 #J
+b000 "q
+b000 #[
+b000 #Z
+b0000 D
+b0000 E
+b0000 "'
+b0000 ")
+b0000 "(
+b0000 L
+b0000 ",
+b0000 J
+b0000 I
+b0000 G
+b000 "$
+b0000 R
+b000 "%
+b0000 S
+b000 "#
+b0000 N
+b00000000000 "1
+b0000 O
+b000 ".
+b0000 "=
+b0000 ]
+b0000 [
+b0000 #"
+b0000 "B
+b0000 ##
+b000 "6
+b000 "4
+b0000 "G
+b0000 #(
+b0000 "F
+b000 "2
+b0000 "I
+b0000 #*
+b0000 a
+b0000 #)
+b0000 _
+b000 ">
+b0000 #.
+b000 "?
+b0000 "L
+b000 "<
+b0000 "N
+b0000 #2
+b0000 #1
+b0000 #3
+b0000 #5
+b0000 r
+b000 #&
+b0000 p
+0$
+b0000 q
+b0000 #9
+b000 "@
+b000 #!
+0&
+b000 #/
+b000 "O
+b000 #0
+b0000 z
+b0000 "`
+b0000 "c
+b0000 #D
+$end
+#0
+b1000 "c
+b100 #F
+b10 "f
+b10 #H
+1"h
+b100 #I
+b100 #J
+b100 #L
+1#P
+b10 "r
+b1000 #V
+b100 #Z
+1#b
+b100 "
+b1000 #
+b10 #g
+b100 '
+b100 )
+b100 *
+b100 +
+b10 /
+10
+b100 B
+b100 "$
+b100 "%
+b10 F
+b1000 "(
+b100 ".
+b00000001000 "1
+b00000001000 P
+b100 "4
+b100 W
+1"9
+b10 ":
+b10 Y
+b100 ">
+b100 "?
+b10 ^
+b100 "@
+b10 "A
+b10 d
+b100 f
+b10 "H
+b1000 "I
+b10 j
+b100 k
+b10 "M
+b100 l
+b100 "O
+b100 #0
+b10 o
+1"Q
+1"R
+b100 "U
+b10 #6
+b100 t
+b100 #7
+b100 #8
+b100 v
+b00000001000 w
+b100 #:
+b10 x
+b100 #<
+b100 "]
+b10 #>
+b10 |
+b10 #?
+b10 }
+b1000 "`
+b10 #A
+1#B
+#1
+1"D
+1"T
+1#e
+1"7
+1#;
+1";
+1#=
+1;
+#6
+0"D
+0#e
+1"E
+0"h
+1#,
+1#-
+0#P
+0"Q
+00
+0"R
+0"T
+1s
+0"7
+0"9
+0#;
+0";
+0#=
+0;
+1#_
+0#B
+0#b
+#11
+1"D
+1#e
+b0100 E
+b0100 "'
+1"i
+1#M
+1"T
+1U
+1"7
+b0100 "w
+1#;
+1";
+b0100 :
+1#=
+1;
+1<
+#16
+b01 "b
+b11 #H
+b110 #J
+b011 #L
+b0100 "l
+b000110 "m
+b0011 "n
+b0010 "o
+b000100 #Q
+b0010 #R
+b011 "q
+b000110 "s
+b110 #Z
+b0011 #c
+b011 !
+0#e
+b01 #f
+1$
+b01 #g
+b0011 %
+b011 '
+b01 (
+b110 +
+b10 9
+0;
+1""
+b011 "#
+b11 F
+b0010 I
+b0010 J
+b10 "-
+b0001 L
+b000100 "/
+b0100 N
+b10 "0
+b0011 O
+b010 "2
+b10 Q
+b0100 R
+b0001 S
+b01 T
+0"7
+b11 Y
+0";
+b010 "<
+b01 \
+b0001 ]
+b0010 _
+b11 "A
+b0011 a
+1#$
+0"D
+b01 d
+b0001 "F
+b0100 "G
+b110 f
+b10 i
+b01 j
+b01 "M
+b010 #/
+b0001 "N
+b000 "O
+b110 #0
+1n
+b0001 p
+b0011 q
+b0010 r
+0"T
+1u
+b001 #8
+b110 v
+b0100 #9
+b01 "X
+b001 #:
+b01 x
+0#;
+b0100 z
+0#=
+b000 "]
+b00 #>
+b01 |
+1"_
+b010 #@
+b011 ~
+b00 #A
+b10 "a
+#21
+1"D
+1#e
+1"e
+b0100 D
+b0000 E
+b0011 "'
+b0100 ")
+1#O
+1"T
+1"7
+b0000 "w
+1V
+b0100 "y
+b0100 8
+1#;
+1";
+b0011 :
+1#=
+1;
+1=
+#26
+0"D
+0"T
+0#e
+0"7
+0#;
+0";
+0#=
+0;
+#31
+1@
+b0000 D
+1"g
+b0100 G
+b0011 ")
+1"*
+b0100 #K
+1"k
+b0100 ",
+1#N
+b0100 #S
+1"3
+b0100 "v
+1"7
+b10 "8
+b0100 "x
+b0000 "y
+1X
+1";
+b0100 [
+b010 #!
+b0100 #"
+b10 `
+b0100 ##
+1#d
+1"D
+1#e
+b10 c
+b10 g
+b10 h
+b0100 #1
+b010 "P
+b0100 #2
+b0100 #3
+b0100 #5
+1"T
+1"W
+b0100 7
+b0011 8
+1#;
+b10 y
+1#=
+1;
+1>
+#36
+0"D
+0"T
+0#e
+0"7
+0#;
+0";
+0#=
+0;
+#41
+b0100 #G
+b0000 G
+b0010 #K
+b0011 ",
+b0000 #S
+b01 #U
+b0010 "v
+1"7
+1#X
+b01 "8
+b0000 "x
+b11 ":
+1";
+b0011 [
+1"}
+b0100 #^
+b010 "?
+b001 #!
+b110 "@
+b0000 #"
+b00 `
+b0011 ##
+b110 "
+1"D
+1#e
+b01 c
+b01 g
+b00 h
+b110 )
+b010 k
+b01 ,
+b110 l
+b0000 #1
+b001 "P
+b11 /
+b0011 #2
+b0000 #3
+11
+b0011 #5
+1"T
+14
+b0011 7
+1#;
+b01 y
+1#=
+1;
+#46
+b00 "b
+b110 #F
+b11 "f
+b000 #I
+b111 #L
+b0111 "l
+b0000 "n
+b0111 "o
+b000110 #Q
+b0000 #R
+b110 "q
+b100 #Z
+b11 "{
+b0111 #c
+b110 !
+0#e
+b11 #f
+b00 #g
+b0111 %
+b111 '
+b11 (
+b000 *
+b11 9
+0;
+b110 "#
+1C
+b10 F
+b0000 I
+b0000 J
+b11 "-
+b0000 L
+b000110 "/
+b0000 N
+b11 "0
+b0000 O
+b110 "2
+b11 Q
+b0111 R
+b0000 S
+b00 T
+0"7
+0";
+b110 "<
+b11 \
+b0000 ]
+b0000 _
+b10 "A
+b0111 a
+b11 "C
+0#$
+0"D
+1#%
+b00 d
+b0111 "F
+b0000 "G
+b11 "H
+b11 i
+b00 j
+b00 "M
+b110 #/
+b0000 "N
+b111 "O
+b100 #0
+b0111 p
+b0111 q
+1"S
+b0111 r
+0"T
+b110 "U
+b110 #7
+b000 #8
+b0111 #9
+b11 "X
+b000 #:
+b11 x
+0#;
+b110 #<
+b0111 z
+0#=
+1"\
+b111 "]
+b11 #>
+b11 |
+0"_
+b110 #@
+b110 ~
+b11 #A
+b11 "a
+#51
+1"D
+b0100 #E
+1#e
+b0010 #G
+b0111 E
+b0111 "'
+1"T
+1#W
+1"7
+b0111 "w
+1#;
+1";
+b0111 :
+1#=
+1"|
+1;
+b0010 #^
+b0100 #`
+#56
+0"D
+0"T
+0#e
+0"7
+0#;
+0";
+0#=
+0;
+#61
+b0100 #D
+b0010 #E
+b0111 D
+b0111 ")
+b10 "t
+b10 "u
+b010 "6
+1"7
+1#Y
+b0111 "y
+1"z
+1";
+1#]
+b0100 "=
+b0010 #`
+b0100 #a
+1"D
+1#e
+b0100 "L
+b0100 #.
+b0100 -
+b0100 .
+1"T
+16
+b10 "Y
+b0111 8
+1#;
+1#=
+1;
+1?
+#66
+0"D
+0"T
+0#e
+0"7
+0#;
+0";
+0#=
+0;
+#71
+b0010 #D
+b1100 "c
+1"d
+b0111 #K
+1"p
+b11 "r
+b0111 #S
+b01 "t
+b00 #U
+b01 "u
+b1100 #V
+b0111 "v
+b0111 "x
+b0010 #a
+1#e
+b1100 #
+b00 ,
+b0010 -
+b0010 .
+12
+13
+b0111 7
+1;
+b110 B
+b0111 G
+b0111 ",
+1M
+b00000001100 "1
+b110 "4
+b001 "6
+1"7
+b11 "8
+1";
+b0111 [
+b0010 "=
+b110 "?
+b011 #!
+b0111 #"
+b11 `
+b0111 ##
+1"D
+b11 c
+b0100 #(
+b11 g
+b1100 "I
+b11 h
+b0010 "L
+b110 k
+b0010 #.
+b0111 #1
+b011 "P
+b0111 #2
+b0111 #3
+b0111 #5
+1"T
+b00000001100 w
+b01 "Y
+1#;
+b11 y
+1#=
+b11 }
+#76
+b10 #H
+b011 #I
+b100 #J
+b101 #L
+b0011 "l
+b0010 "n
+b0001 "o
+b000100 #Q
+b0001 #R
+b010 "q
+b000100 "s
+b01 "{
+b0010 #c
+b011 !
+0#e
+b01 #f
+0$
+b01 #g
+b0010 %
+b000 '
+b01 (
+b010 *
+b100 +
+b10 9
+0;
+0""
+b011 "#
+0C
+b01 "+
+b0010 J
+b01 "-
+b0010 L
+b000100 "/
+b0010 N
+b0010 O
+b001 "2
+b00 Q
+b0110 R
+b0010 S
+0"7
+b110 W
+b10 Y
+0";
+b010 "<
+b01 \
+b0010 ]
+b0010 _
+b0000 a
+b01 "C
+0"D
+b01 d
+b0011 "F
+b01 e
+b0010 "G
+b100 f
+b10 "H
+b01 i
+b10 j
+b01 "M
+b001 #/
+b0010 "N
+1m
+b110 "O
+0n
+b0011 p
+b0000 q
+0"S
+b0001 r
+0"T
+b100 "U
+b100 #8
+b100 v
+b0110 #9
+b01 "X
+b001 #:
+b00 x
+0#;
+b100 #<
+b0110 z
+0#=
+0"\
+b000 "]
+b10 |
+b11 #?
+b010 #@
+b010 ~
+b00 #A
+#81
+1"D
+1#e
+b0111 #G
+b0110 E
+b0000 "'
+b0010 #(
+b0100 #)
+1K
+1"T
+1"7
+b0000 "w
+1#;
+1";
+b0101 :
+1#=
+1;
+b0111 #^
+#86
+0"D
+0"T
+0#e
+0"7
+0#;
+0";
+0#=
+0;
+#91
+b0100 "B
+1"D
+b0111 #E
+1#e
+b0110 D
+b0010 #)
+b0000 ")
+b0100 #*
+1H
+1"T
+1"V
+1"7
+b0000 "y
+b0101 8
+1#;
+1";
+b0100 #\
+1Z
+1#=
+1;
+b0111 #`
+#96
+0"D
+0"T
+0#e
+0"7
+0#;
+0";
+0#=
+0;
+#101
+b0111 #D
+b0100 "c
+b0100 #K
+0"p
+b10 "r
+b0110 #S
+b11 "t
+b11 #U
+b11 "u
+b0100 #V
+b0011 "v
+b0000 "x
+b001 #[
+b0010 #\
+1"~
+b0111 #a
+1#e
+b0111 #
+b100 )
+b10 ,
+b0111 -
+b0111 .
+01
+02
+03
+b001 5
+b0101 7
+1;
+b100 B
+b110 "$
+b110 "%
+b1100 "(
+b0110 G
+b0000 ",
+b00000001110 "1
+b00000001100 P
+b100 "4
+b011 "6
+1"7
+b10 ":
+1";
+b0000 [
+b0111 "=
+b110 ">
+b100 "?
+b11 ^
+b001 #!
+b000 "@
+b0000 #"
+b00 `
+b0010 "B
+b0101 ##
+1"D
+b10 c
+b00 g
+b0010 #*
+b0111 "I
+1"J
+1"K
+b0111 "L
+b001 k
+b0111 #.
+b0110 #1
+b010 "P
+b11 o
+b0000 #2
+b0000 #3
+b0101 #5
+1"T
+b110 t
+b00000001000 w
+b11 "Y
+1#;
+b10 y
+1#=
+b10 }
+b1100 "`
+#106
+0"D
+0"T
+0#e
+0"7
+0#;
+0";
+0#=
+0;

@@ -1,0 +1,184 @@
+$date
+2025-07-17T21:53+0000
+$end
+$version
+0.2
+$end
+$comment
+
+$end
+$timescale 1ns  $end
+$scope module FP4Subtractor $end
+ $var wire 3 ! aligned_smaller_man $end
+ $var wire 1 " valid_reg $end
+ $var wire 1 # io_out_valid $end
+ $var wire 2 $ smaller_exp $end
+ $var wire 1 % lzc_leftCount_left $end
+ $var wire 2 & lzc $end
+ $var wire 5 ' result_reg_r $end
+ $var wire 3 ( diff_man $end
+ $var wire 5 ) result_reg $end
+ $var wire 2 * final_man $end
+ $var wire 2 + a_man_raw $end
+ $var wire 1 , lzc_leftCount_right $end
+ $var wire 1 - a_gte_b $end
+ $var wire 3 . clamped_unbiased $end
+ $var wire 1 / clock $end
+ $var wire 3 0 exp_diff $end
+ $var wire 3 1 larger_man $end
+ $var wire 4 2 io_b $end
+ $var wire 4 3 io_a $end
+ $var wire 1 4 reset $end
+ $var wire 1 5 lzc_right $end
+ $var wire 2 6 a_exp $end
+ $var wire 4 7 io_out $end
+ $var wire 1 8 io_in_valid $end
+ $var wire 3 9 norm_unbiased $end
+ $var wire 5 : result $end
+ $var wire 2 ; b_exp $end
+ $var wire 3 < larger_unbiased $end
+ $var wire 3 = smaller_man $end
+ $var wire 5 > result_reg_r_1 $end
+ $var wire 1 ? valid_reg_r_1 $end
+ $var wire 2 @ lzc_left $end
+ $var wire 3 A final_exp $end
+ $var wire 6 B norm_man_full $end
+ $var wire 1 C lzc_leftCount_rightCount $end
+ $var wire 4 D b_mag $end
+ $var wire 2 E larger_exp $end
+ $var wire 2 F b_man_raw $end
+ $var wire 1 G lzc_rightCount $end
+ $var wire 3 H b_man $end
+ $var wire 1 I lzc_leftCount_leftCount $end
+ $var wire 1 J io_in_en $end
+ $var wire 1 K result_zero $end
+ $var wire 4 L a_mag $end
+ $var wire 1 M lzc_leftCount $end
+ $var wire 1 N valid_reg_r $end
+ $var wire 3 O a_man $end
+$upscope $end
+$enddefinitions $end
+$dumpvars
+b0000 D
+b000 H
+b00 6
+04
+05
+b00 ;
+b0000 L
+b000 O
+08
+0?
+b000 9
+0C
+b00 &
+b00000 '
+b00000 )
+b00 +
+0G
+b00 *
+0I
+b000 A
+0J
+0K
+0M
+b00 $
+b000 =
+0N
+b000 <
+b000 (
+b000 .
+b00000 :
+b000 1
+b000 0
+b00000 >
+b0000 2
+0"
+b0000 3
+0#
+b00 F
+0%
+b00 @
+b000 !
+0,
+b00 E
+0-
+b000000 B
+b0000 7
+0/
+$end
+#0
+1C
+14
+b11 &
+1G
+b100 9
+1I
+1K
+b111 <
+1-
+b111 .
+#1
+1/
+#6
+04
+18
+1J
+0/
+#11
+1N
+1/
+#16
+08
+0J
+0/
+#21
+1/
+#26
+0/
+#31
+1/
+#36
+b0001 2
+b0001 D
+b01 F
+18
+1J
+0-
+0/
+#41
+1/
+1?
+#46
+08
+0J
+0/
+#51
+1/
+#56
+0/
+#61
+1/
+#66
+b0010 2
+b0010 D
+b10 F
+18
+1J
+0/
+#71
+1"
+1#
+1/
+#76
+08
+0J
+0/
+#81
+1/
+#86
+0/
+#91
+1/
+#96
+0/

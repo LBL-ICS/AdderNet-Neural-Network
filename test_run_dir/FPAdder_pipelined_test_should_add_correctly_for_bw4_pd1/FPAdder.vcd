@@ -1,0 +1,342 @@
+$date
+2025-07-28T22:00+0000
+$end
+$version
+0.2
+$end
+$comment
+
+$end
+$timescale 1ns  $end
+$scope module FPAdder $end
+ $var wire 2 ! baseA $end
+ $var wire 1 " sr_valid_0 $end
+ $var wire 4 # sr_b_0 $end
+ $var wire 2 $ baseB $end
+ $var wire 4 % io_in_a $end
+ $var wire 4 & io_in_b $end
+ $var wire 2 ' normExp $end
+ $var wire 1 ( io_valid_in $end
+ $var wire 1 ) io_valid_out $end
+ $var wire 1 * clock $end
+ $var wire 2 + alignedFracB $end
+ $var wire 2 , alignedFracA $end
+ $var wire 1 - shiftAmount $end
+ $var wire 1 . reset $end
+ $var wire 4 / io_out $end
+ $var wire 1 0 aBigger $end
+ $var wire 1 1 fracA $end
+ $var wire 2 2 commonExp $end
+ $var wire 4 3 sr_a_0 $end
+ $var wire 1 4 fracB $end
+ $var wire 3 5 sum $end
+ $var wire 2 6 expB $end
+ $var wire 2 7 expA $end
+ $var wire 1 8 normFrac $end
+$upscope $end
+$enddefinitions $end
+$dumpvars
+00
+01
+b00 7
+b00 6
+04
+08
+b00 2
+b00 '
+b00 ,
+b000 5
+b00 +
+b00 !
+b00 $
+b0000 %
+b0000 #
+b0000 &
+0"
+b0000 3
+b0000 /
+0(
+0)
+0*
+0-
+0.
+$end
+#0
+10
+b10 !
+b10 $
+b100 5
+b01 '
+b10 +
+b10 ,
+1.
+b0010 /
+#1
+1*
+#6
+1(
+0*
+0.
+#11
+1"
+1)
+1*
+#16
+b0001 %
+b0001 &
+0*
+#21
+b11 !
+b0001 #
+b11 $
+1*
+b11 +
+b11 ,
+b0011 /
+11
+b0001 3
+14
+b110 5
+18
+#26
+b0010 %
+0*
+#31
+b10 !
+01
+b01 2
+b0010 3
+b011 5
+b01 7
+1*
+b01 +
+b10 ,
+1-
+#36
+b0011 %
+b0010 &
+0*
+#41
+b11 !
+b0010 #
+b10 $
+b10 '
+1*
+b10 +
+b11 ,
+0-
+b0100 /
+11
+b0011 3
+04
+b101 5
+b01 6
+08
+#46
+b0100 %
+0*
+#51
+b10 !
+1*
+b01 +
+b10 ,
+1-
+b0101 /
+01
+b10 2
+b0100 3
+b011 5
+b10 7
+18
+#56
+b0101 %
+b0011 &
+0*
+#61
+b11 !
+b0011 #
+b11 $
+b11 '
+1*
+b11 ,
+b0110 /
+11
+b0101 3
+14
+b100 5
+08
+#66
+b0110 %
+0*
+#71
+b10 !
+b00 '
+1*
+b11 +
+b10 ,
+0-
+b0000 /
+01
+b11 2
+b0110 3
+b101 5
+b11 7
+#76
+b0111 %
+b0100 &
+0*
+#81
+b11 !
+b0100 #
+b10 $
+1*
+b01 +
+b11 ,
+1-
+11
+b0111 3
+04
+b100 5
+b10 6
+#86
+b1000 %
+0*
+#91
+b10 !
+b11 '
+1*
+b10 +
+b10 ,
+0-
+b0110 /
+00
+01
+b10 2
+b1000 3
+b00 7
+#96
+b1001 %
+b0101 &
+0*
+#101
+b11 !
+b0101 #
+b11 $
+1*
+b11 +
+b11 ,
+b0111 /
+11
+b1001 3
+14
+b110 5
+18
+#106
+b1010 %
+0*
+#111
+b10 !
+01
+b1010 3
+b100 5
+b01 7
+08
+1*
+b01 ,
+1-
+b0110 /
+#116
+b1011 %
+b0110 &
+0*
+#121
+b11 !
+b0110 #
+b10 $
+b00 '
+1*
+b10 +
+b11 ,
+0-
+b0000 /
+11
+b11 2
+b1011 3
+04
+b101 5
+b11 6
+#126
+b1100 %
+0*
+#131
+b10 !
+01
+b1100 3
+b011 5
+b11 '
+b10 7
+18
+1*
+b01 ,
+1-
+b0111 /
+#136
+b1101 %
+b0111 &
+0*
+#141
+b11 !
+b0111 #
+b11 $
+b00 '
+1*
+b11 +
+b0000 /
+11
+b1101 3
+14
+b100 5
+08
+#146
+b1110 %
+0*
+#151
+10
+b10 !
+01
+b1110 3
+b101 5
+b11 7
+1*
+b10 ,
+0-
+#156
+b0000 %
+b0000 &
+0(
+0*
+#161
+0"
+b0000 #
+b10 $
+b01 '
+0)
+1*
+b10 +
+b0010 /
+b00 2
+b0000 3
+04
+b100 5
+b00 6
+b00 7
+#166
+0*
+#171
+1*
+#176
+0*
+#181
+1*
+#186
+0*

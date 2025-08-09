@@ -1,0 +1,267 @@
+$date
+2025-07-28T19:57+0000
+$end
+$version
+0.2
+$end
+$comment
+
+$end
+$timescale 1ns  $end
+$scope module FPAdder $end
+ $var wire 4 ! io_in_a $end
+ $var wire 4 " io_in_b $end
+ $var wire 1 # io_out_valid $end
+ $var wire 3 $ manA $end
+ $var wire 4 % pipe_data_0 $end
+ $var wire 3 & manB $end
+ $var wire 3 ' expDiff $end
+ $var wire 2 ( manB_raw $end
+ $var wire 1 ) reset $end
+ $var wire 1 * io_in_valid $end
+ $var wire 2 + resultFrac $end
+ $var wire 2 , resultExp $end
+ $var wire 32 - cycle $end
+ $var wire 4 . resultMan $end
+ $var wire 2 / manA_raw $end
+ $var wire 2 0 expBig $end
+ $var wire 3 1 alignedManA $end
+ $var wire 3 2 alignedManB $end
+ $var wire 3 3 maxExp $end
+ $var wire 1 4 clock $end
+ $var wire 1 5 printf_1 $end
+ $var wire 1 6 printf_2 $end
+ $var wire 3 7 shiftAmount $end
+ $var wire 1 8 pipe_valids_0 $end
+ $var wire 4 9 io_out $end
+ $var wire 4 : normalized $end
+ $var wire 1 ; printf $end
+ $var wire 2 < expB $end
+ $var wire 2 = expA $end
+ $var wire 4 > finalResult $end
+$upscope $end
+$enddefinitions $end
+$dumpvars
+b00000000000000000000000000000000 -
+04
+b00 =
+05
+b00 <
+b0000 >
+06
+08
+b00 0
+b00 /
+0;
+b000 7
+b00 (
+b000 3
+b000 2
+b00 ,
+b00 +
+b000 '
+b0000 %
+b000 &
+b0000 "
+b0000 !
+b000 $
+b000 1
+0#
+b0000 .
+0)
+b0000 :
+0*
+b0000 9
+$end
+#0
+b011 3
+1)
+#1
+14
+#6
+04
+0)
+1*
+#11
+1#
+14
+18
+b00000000000000000000000000000001 -
+#16
+b0001 !
+b001 1
+b001 $
+04
+b0001 :
+b0001 .
+b01 /
+#21
+14
+b00000000000000000000000000000010 -
+#26
+b0010 !
+b0001 "
+b010 $
+b001 &
+b01 (
+b01 +
+b0011 .
+b10 /
+b010 1
+b001 2
+04
+b0011 :
+b0001 >
+#31
+14
+b0001 %
+b0001 9
+b00000000000000000000000000000011 -
+#36
+b0011 !
+b0010 "
+b011 $
+b010 &
+b10 (
+b10 +
+b0101 .
+b11 /
+b011 1
+b010 2
+04
+b0101 :
+b0010 >
+#41
+14
+b0010 %
+b0010 9
+b00000000000000000000000000000100 -
+#46
+b0100 !
+b0011 "
+b100 $
+b011 &
+b001 '
+b11 (
+b01 ,
+b00 /
+b01 0
+b100 1
+b001 2
+04
+b001 7
+b01 =
+b0110 >
+#51
+14
+b0110 %
+b0110 9
+b00000000000000000000000000000101 -
+#56
+b0101 !
+b0100 "
+b101 $
+b100 &
+b000 '
+b00 (
+b10 ,
+b1001 .
+b01 /
+b101 1
+b100 2
+04
+b000 7
+b0100 :
+b01 <
+b1010 >
+#61
+14
+b1010 %
+b1010 9
+b00000000000000000000000000000110 -
+#66
+b0110 !
+b110 1
+b0101 "
+b101 2
+b110 $
+04
+b101 &
+b01 (
+b0101 :
+b1011 .
+b10 /
+#71
+14
+b00000000000000000000000000000111 -
+#76
+b0111 !
+b0110 "
+b111 $
+b110 &
+b10 (
+b11 +
+b1101 .
+b11 /
+b111 1
+b110 2
+04
+b0110 :
+b1011 >
+#81
+14
+b1011 %
+b1011 9
+b00000000000000000000000000001000 -
+#86
+b1000 !
+b0111 "
+b100 $
+b111 &
+b001 '
+b11 (
+b0111 .
+b00 /
+b10 0
+b100 1
+b011 2
+04
+b001 7
+b0111 :
+b10 =
+#91
+14
+b00000000000000000000000000001001 -
+#96
+b1001 !
+b1000 "
+b101 $
+b100 &
+b000 '
+b00 (
+b10 +
+b11 ,
+b1001 .
+b01 /
+b101 1
+b100 2
+04
+b000 7
+b0100 :
+b10 <
+b1110 >
+#101
+14
+b1110 %
+b1110 9
+b00000000000000000000000000001010 -
+#106
+04
+0*
+#111
+0#
+14
+08
+b00000000000000000000000000001011 -
+#116
+04

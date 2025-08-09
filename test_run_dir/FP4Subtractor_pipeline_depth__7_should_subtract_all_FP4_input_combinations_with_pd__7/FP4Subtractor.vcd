@@ -1,0 +1,434 @@
+$date
+2025-07-17T21:53+0000
+$end
+$version
+0.2
+$end
+$comment
+
+$end
+$timescale 1ns  $end
+$scope module FP4Subtractor $end
+ $var wire 3 ! aligned_smaller_man $end
+ $var wire 1 " valid_reg $end
+ $var wire 1 # io_out_valid $end
+ $var wire 3 $ diff_man $end
+ $var wire 2 % final_man $end
+ $var wire 1 & lzc_leftCount_right $end
+ $var wire 3 ' clamped_unbiased $end
+ $var wire 3 ( larger_man $end
+ $var wire 1 ) reset $end
+ $var wire 1 * lzc_right $end
+ $var wire 1 + io_in_valid $end
+ $var wire 5 , result $end
+ $var wire 2 - b_exp $end
+ $var wire 3 . larger_unbiased $end
+ $var wire 3 / smaller_man $end
+ $var wire 5 0 result_reg_r_4 $end
+ $var wire 5 1 result_reg_r_5 $end
+ $var wire 5 2 result_reg_r_2 $end
+ $var wire 5 3 result_reg_r_3 $end
+ $var wire 5 4 result_reg_r_1 $end
+ $var wire 1 5 valid_reg_r_1 $end
+ $var wire 1 6 valid_reg_r_2 $end
+ $var wire 2 7 lzc_left $end
+ $var wire 6 8 norm_man_full $end
+ $var wire 1 9 lzc_leftCount_rightCount $end
+ $var wire 4 : b_mag $end
+ $var wire 1 ; valid_reg_r_5 $end
+ $var wire 1 < valid_reg_r_3 $end
+ $var wire 1 = valid_reg_r_4 $end
+ $var wire 2 > b_man_raw $end
+ $var wire 1 ? lzc_rightCount $end
+ $var wire 3 @ b_man $end
+ $var wire 1 A lzc_leftCount_leftCount $end
+ $var wire 1 B result_zero $end
+ $var wire 1 C valid_reg_r $end
+ $var wire 2 D smaller_exp $end
+ $var wire 1 E lzc_leftCount_left $end
+ $var wire 2 F lzc $end
+ $var wire 5 G result_reg_r $end
+ $var wire 5 H result_reg $end
+ $var wire 2 I a_man_raw $end
+ $var wire 1 J a_gte_b $end
+ $var wire 1 K clock $end
+ $var wire 3 L exp_diff $end
+ $var wire 4 M io_b $end
+ $var wire 4 N io_a $end
+ $var wire 2 O a_exp $end
+ $var wire 4 P io_out $end
+ $var wire 3 Q norm_unbiased $end
+ $var wire 3 R final_exp $end
+ $var wire 2 S larger_exp $end
+ $var wire 1 T io_in_en $end
+ $var wire 4 U a_mag $end
+ $var wire 1 V lzc_leftCount $end
+ $var wire 3 W a_man $end
+$upscope $end
+$enddefinitions $end
+$dumpvars
+b00 7
+05
+06
+09
+0;
+0<
+0=
+0?
+0A
+0B
+0C
+b00 -
+0E
+0J
+0K
+b00000 ,
+b00 %
+b00000 1
+b00000 0
+b00000 3
+b00000 2
+b00000 4
+0T
+0V
+b000 W
+b00000 G
+b000 R
+b00000 H
+b0000 :
+b000000 8
+b0000 M
+b000 Q
+b000 L
+b0000 U
+b0000 P
+b0000 N
+b000 @
+b000 '
+b000 (
+b000 $
+b000 /
+b000 .
+b00 O
+b00 S
+b00 I
+0"
+0#
+b00 F
+0&
+0)
+b000 !
+0*
+0+
+b00 >
+b00 D
+$end
+#0
+1A
+b100 Q
+1B
+b11 F
+b111 '
+1)
+19
+1J
+b111 .
+1?
+#1
+1K
+#6
+1T
+0)
+1+
+0K
+#11
+1C
+1K
+#16
+0T
+0+
+0K
+#21
+1K
+#26
+0K
+#31
+1K
+#36
+0K
+#41
+1K
+#46
+0K
+#51
+1K
+#56
+0K
+#61
+1K
+#66
+0K
+#71
+1K
+#76
+1T
+b0001 :
+0J
+1+
+0K
+b0001 M
+b01 >
+#81
+15
+1K
+#86
+0T
+0+
+0K
+#91
+1K
+#96
+0K
+#101
+1K
+#106
+0K
+#111
+1K
+#116
+0K
+#121
+1K
+#126
+0K
+#131
+1K
+#136
+0K
+#141
+1K
+#146
+1T
+b0010 :
+1+
+0K
+b0010 M
+b10 >
+#151
+16
+1K
+#156
+0T
+0+
+0K
+#161
+1K
+#166
+0K
+#171
+1K
+#176
+0K
+#181
+1K
+#186
+0K
+#191
+1K
+#196
+0K
+#201
+1K
+#206
+0K
+#211
+1K
+#216
+1T
+b0011 :
+1+
+0K
+b0011 M
+b11 >
+#221
+1K
+1<
+#226
+0T
+0+
+0K
+#231
+1K
+#236
+0K
+#241
+1K
+#246
+0K
+#251
+1K
+#256
+0K
+#261
+1K
+#266
+0K
+#271
+1K
+#276
+0K
+#281
+1K
+#286
+b100 @
+0A
+0B
+b100 $
+1E
+b00 F
+b000 '
+b100 (
+1+
+0K
+b00100 ,
+b001 L
+b01 -
+b0100 M
+b000 .
+b000 Q
+b001 R
+b01 S
+1T
+b10 7
+b000100 8
+b0100 :
+b00 >
+#291
+b00100 G
+1K
+1=
+#296
+0T
+0+
+0K
+#301
+1K
+#306
+0K
+#311
+1K
+#316
+0K
+#321
+1K
+#326
+0K
+#331
+1K
+#336
+0K
+#341
+1K
+#346
+0K
+#351
+1K
+#356
+b101 @
+b101 $
+b01 %
+b101 (
+1*
+1+
+0K
+b00101 ,
+b0101 M
+1T
+b000101 8
+b0101 :
+b01 >
+0?
+#361
+b00100 4
+b00101 G
+1;
+1K
+#366
+0T
+0+
+0K
+#371
+1K
+#376
+0K
+#381
+1K
+#386
+0K
+#391
+1K
+#396
+0K
+#401
+1K
+#406
+0K
+#411
+1K
+#416
+0K
+#421
+1K
+#426
+b110 @
+b110 $
+b10 %
+1&
+b110 (
+0*
+1+
+0K
+b00110 ,
+b0110 M
+1T
+b11 7
+b000110 8
+09
+b0110 :
+b10 >
+1?
+#431
+1"
+b00100 2
+1#
+b00101 4
+b00110 G
+1K
+#436
+0T
+0+
+0K
+#441
+1K
+#446
+0K
+#451
+1K
+#456
+0K
+#461
+1K
+#466
+0K
+#471
+1K
+#476
+0K
+#481
+1K
+#486
+0K
+#491
+1K
+#496
+0K

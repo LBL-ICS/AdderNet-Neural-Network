@@ -1,0 +1,142 @@
+FIRRTL version 1.2.0
+circuit FP4Subtractor :
+  module FP4Subtractor : @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 282:7]
+    input clock : Clock @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 282:7]
+    input reset : UInt<1> @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 282:7]
+    input io_in_en : UInt<1> @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 286:14]
+    input io_in_valid : UInt<1> @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 286:14]
+    input io_a : UInt<5> @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 286:14]
+    input io_b : UInt<5> @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 286:14]
+    output io_out : UInt<5> @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 286:14]
+    output io_out_valid : UInt<1> @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 286:14]
+
+    node a_exp = bits(io_a, 4, 3) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 302:19]
+    node a_man_raw = bits(io_a, 2, 0) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 303:23]
+    node b_exp = bits(io_b, 4, 3) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 304:19]
+    node b_man_raw = bits(io_b, 2, 0) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 305:23]
+    node _a_man_T = eq(a_exp, UInt<1>("h0")) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 308:13]
+    node _a_man_T_1 = cat(UInt<1>("h1"), a_man_raw) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 308:30]
+    node a_man = mux(_a_man_T, UInt<1>("h0"), _a_man_T_1) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 308:8]
+    node _b_man_T = eq(b_exp, UInt<1>("h0")) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 308:13]
+    node _b_man_T_1 = cat(UInt<1>("h1"), b_man_raw) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 308:30]
+    node b_man = mux(_b_man_T, UInt<1>("h0"), _b_man_T_1) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 308:8]
+    node a_mag = cat(a_exp, a_man_raw) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 314:18]
+    node b_mag = cat(b_exp, b_man_raw) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 315:18]
+    node a_gte_b = geq(a_mag, b_mag) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 316:23]
+    node larger_exp = mux(a_gte_b, a_exp, b_exp) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 318:39]
+    node smaller_exp = mux(a_gte_b, b_exp, a_exp) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 318:67]
+    node larger_man = mux(a_gte_b, a_man, b_man) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 319:39]
+    node smaller_man = mux(a_gte_b, b_man, a_man) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 319:67]
+    node _exp_diff_T = cvt(larger_exp) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 321:30]
+    node _exp_diff_T_1 = cvt(smaller_exp) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 321:49]
+    node _exp_diff_T_2 = sub(_exp_diff_T, _exp_diff_T_1) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 321:35]
+    node _exp_diff_T_3 = tail(_exp_diff_T_2, 1) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 321:35]
+    node _exp_diff_T_4 = asSInt(_exp_diff_T_3) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 321:35]
+    node exp_diff = asUInt(_exp_diff_T_4) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 321:55]
+    node aligned_smaller_man = dshr(smaller_man, exp_diff) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 322:41]
+    node _diff_man_T = sub(larger_man, aligned_smaller_man) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 324:29]
+    node diff_man = tail(_diff_man_T, 1) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 324:29]
+    node result_zero = eq(diff_man, UInt<1>("h0")) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 325:30]
+    node lzc_left = bits(diff_man, 3, 2) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 333:19]
+    node lzc_right = bits(diff_man, 1, 0) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 334:20]
+    node lzc_leftCount_left = bits(lzc_left, 1, 1) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 333:19]
+    node lzc_leftCount_right = bits(lzc_left, 0, 0) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 334:20]
+    node _lzc_leftCount_leftCount_T = not(lzc_leftCount_left) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 330:8]
+    node lzc_leftCount_leftCount = bits(_lzc_leftCount_leftCount_T, 0, 0) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 330:11]
+    node _lzc_leftCount_rightCount_T = not(lzc_leftCount_right) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 330:8]
+    node lzc_leftCount_rightCount = bits(_lzc_leftCount_rightCount_T, 0, 0) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 330:11]
+    node _lzc_leftCount_T = eq(lzc_leftCount_left, UInt<1>("h0")) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 337:16]
+    node _lzc_leftCount_T_1 = add(lzc_leftCount_rightCount, UInt<1>("h1")) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 337:36]
+    node _lzc_leftCount_T_2 = tail(_lzc_leftCount_T_1, 1) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 337:36]
+    node lzc_leftCount = mux(_lzc_leftCount_T, _lzc_leftCount_T_2, lzc_leftCount_leftCount) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 337:10]
+    node lzc_rightCount_left = bits(lzc_right, 1, 1) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 333:19]
+    node lzc_rightCount_right = bits(lzc_right, 0, 0) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 334:20]
+    node _lzc_rightCount_leftCount_T = not(lzc_rightCount_left) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 330:8]
+    node lzc_rightCount_leftCount = bits(_lzc_rightCount_leftCount_T, 0, 0) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 330:11]
+    node _lzc_rightCount_rightCount_T = not(lzc_rightCount_right) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 330:8]
+    node lzc_rightCount_rightCount = bits(_lzc_rightCount_rightCount_T, 0, 0) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 330:11]
+    node _lzc_rightCount_T = eq(lzc_rightCount_left, UInt<1>("h0")) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 337:16]
+    node _lzc_rightCount_T_1 = add(lzc_rightCount_rightCount, UInt<1>("h1")) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 337:36]
+    node _lzc_rightCount_T_2 = tail(_lzc_rightCount_T_1, 1) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 337:36]
+    node lzc_rightCount = mux(_lzc_rightCount_T, _lzc_rightCount_T_2, lzc_rightCount_leftCount) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 337:10]
+    node _lzc_T = eq(lzc_left, UInt<1>("h0")) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 337:16]
+    node _lzc_T_1 = add(lzc_rightCount, UInt<2>("h2")) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 337:36]
+    node _lzc_T_2 = tail(_lzc_T_1, 1) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 337:36]
+    node lzc = mux(_lzc_T, _lzc_T_2, lzc_leftCount) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 337:10]
+    node norm_man_full = dshl(diff_man, lzc) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 342:32]
+    node _larger_unbiased_T = cvt(larger_exp) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 345:36]
+    node _larger_unbiased_T_1 = sub(_larger_unbiased_T, asSInt(UInt<2>("h1"))) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 345:41]
+    node _larger_unbiased_T_2 = tail(_larger_unbiased_T_1, 1) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 345:41]
+    node larger_unbiased = asSInt(_larger_unbiased_T_2) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 345:41]
+    node _norm_unbiased_T = cvt(lzc) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 346:45]
+    node _norm_unbiased_T_1 = sub(larger_unbiased, _norm_unbiased_T) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 346:39]
+    node _norm_unbiased_T_2 = tail(_norm_unbiased_T_1, 1) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 346:39]
+    node norm_unbiased = asSInt(_norm_unbiased_T_2) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 346:39]
+    node _clamped_unbiased_T = lt(norm_unbiased, asSInt(UInt<1>("h1"))) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 347:44]
+    node clamped_unbiased = mux(_clamped_unbiased_T, asSInt(UInt<1>("h1")), norm_unbiased) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 347:29]
+    node _final_exp_T = add(clamped_unbiased, asSInt(UInt<2>("h1"))) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 349:59]
+    node _final_exp_T_1 = tail(_final_exp_T, 1) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 349:59]
+    node _final_exp_T_2 = asSInt(_final_exp_T_1) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 349:59]
+    node _final_exp_T_3 = asUInt(_final_exp_T_2) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 349:69]
+    node final_exp = mux(result_zero, UInt<1>("h0"), _final_exp_T_3) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 349:22]
+    node _final_man_T = bits(norm_man_full, 2, 0) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 350:54]
+    node final_man = mux(result_zero, UInt<1>("h0"), _final_man_T) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 350:22]
+    node result = cat(final_exp, final_man) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 352:19]
+    reg result_reg_r : UInt<6>, clock with :
+      reset => (UInt<1>("h0"), result_reg_r) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 355:33]
+    node _GEN_0 = mux(io_in_en, result, result_reg_r) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 355:33 \\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 355:33 \\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 355:33]
+    reg result_reg_r_1 : UInt<6>, clock with :
+      reset => (UInt<1>("h0"), result_reg_r_1) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 355:33]
+    node _GEN_1 = mux(io_in_en, result_reg_r, result_reg_r_1) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 355:33 \\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 355:33 \\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 355:33]
+    reg result_reg_r_2 : UInt<6>, clock with :
+      reset => (UInt<1>("h0"), result_reg_r_2) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 355:33]
+    node _GEN_2 = mux(io_in_en, result_reg_r_1, result_reg_r_2) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 355:33 \\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 355:33 \\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 355:33]
+    reg result_reg_r_3 : UInt<6>, clock with :
+      reset => (UInt<1>("h0"), result_reg_r_3) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 355:33]
+    node _GEN_3 = mux(io_in_en, result_reg_r_2, result_reg_r_3) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 355:33 \\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 355:33 \\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 355:33]
+    reg result_reg_r_4 : UInt<6>, clock with :
+      reset => (UInt<1>("h0"), result_reg_r_4) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 355:33]
+    node _GEN_4 = mux(io_in_en, result_reg_r_3, result_reg_r_4) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 355:33 \\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 355:33 \\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 355:33]
+    reg result_reg_r_5 : UInt<6>, clock with :
+      reset => (UInt<1>("h0"), result_reg_r_5) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 355:33]
+    node _GEN_5 = mux(io_in_en, result_reg_r_4, result_reg_r_5) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 355:33 \\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 355:33 \\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 355:33]
+    reg result_reg : UInt<6>, clock with :
+      reset => (UInt<1>("h0"), result_reg) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 355:33]
+    node _GEN_6 = mux(io_in_en, result_reg_r_5, result_reg) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 355:33 \\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 355:33 \\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 355:33]
+    reg valid_reg_r : UInt<1>, clock with :
+      reset => (UInt<1>("h0"), valid_reg_r) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 356:33]
+    node _GEN_7 = mux(io_in_en, io_in_valid, valid_reg_r) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 356:33 \\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 356:33 \\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 356:33]
+    reg valid_reg_r_1 : UInt<1>, clock with :
+      reset => (UInt<1>("h0"), valid_reg_r_1) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 356:33]
+    node _GEN_8 = mux(io_in_en, valid_reg_r, valid_reg_r_1) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 356:33 \\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 356:33 \\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 356:33]
+    reg valid_reg_r_2 : UInt<1>, clock with :
+      reset => (UInt<1>("h0"), valid_reg_r_2) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 356:33]
+    node _GEN_9 = mux(io_in_en, valid_reg_r_1, valid_reg_r_2) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 356:33 \\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 356:33 \\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 356:33]
+    reg valid_reg_r_3 : UInt<1>, clock with :
+      reset => (UInt<1>("h0"), valid_reg_r_3) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 356:33]
+    node _GEN_10 = mux(io_in_en, valid_reg_r_2, valid_reg_r_3) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 356:33 \\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 356:33 \\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 356:33]
+    reg valid_reg_r_4 : UInt<1>, clock with :
+      reset => (UInt<1>("h0"), valid_reg_r_4) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 356:33]
+    node _GEN_11 = mux(io_in_en, valid_reg_r_3, valid_reg_r_4) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 356:33 \\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 356:33 \\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 356:33]
+    reg valid_reg_r_5 : UInt<1>, clock with :
+      reset => (UInt<1>("h0"), valid_reg_r_5) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 356:33]
+    node _GEN_12 = mux(io_in_en, valid_reg_r_4, valid_reg_r_5) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 356:33 \\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 356:33 \\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 356:33]
+    reg valid_reg : UInt<1>, clock with :
+      reset => (UInt<1>("h0"), valid_reg) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 356:33]
+    node _GEN_13 = mux(io_in_en, valid_reg_r_5, valid_reg) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 356:33 \\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 356:33 \\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 356:33]
+    io_out <= bits(result_reg, 4, 0) @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 358:10]
+    io_out_valid <= valid_reg @[\\REU Project Working\\Chisel-for-Fundamental-IC\\src\\main\\scala\\Fundamental_IC.scala 359:16]
+    result_reg_r <= _GEN_0
+    result_reg_r_1 <= _GEN_1
+    result_reg_r_2 <= _GEN_2
+    result_reg_r_3 <= _GEN_3
+    result_reg_r_4 <= _GEN_4
+    result_reg_r_5 <= _GEN_5
+    result_reg <= _GEN_6
+    valid_reg_r <= _GEN_7
+    valid_reg_r_1 <= _GEN_8
+    valid_reg_r_2 <= _GEN_9
+    valid_reg_r_3 <= _GEN_10
+    valid_reg_r_4 <= _GEN_11
+    valid_reg_r_5 <= _GEN_12
+    valid_reg <= _GEN_13

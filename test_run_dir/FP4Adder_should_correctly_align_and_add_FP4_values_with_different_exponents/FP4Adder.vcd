@@ -1,0 +1,113 @@
+$date
+2025-07-02T18:18+0000
+$end
+$version
+0.2
+$end
+$comment
+
+$end
+$timescale 1ns  $end
+$scope module FP4Adder $end
+ $var wire 2 ! aligned_exp $end
+ $var wire 1 " carry_out $end
+ $var wire 1 # io_out_valid $end
+ $var wire 1 $ out_valid_reg $end
+ $var wire 4 % result_reg_r $end
+ $var wire 4 & result_reg $end
+ $var wire 3 ' sum_man $end
+ $var wire 1 ( clock $end
+ $var wire 2 ) exp_diff $end
+ $var wire 3 * aligned_b_man $end
+ $var wire 4 + io_b $end
+ $var wire 4 , io_a $end
+ $var wire 1 - reset $end
+ $var wire 2 . a_exp $end
+ $var wire 4 / io_out $end
+ $var wire 2 0 norm_sum_man $end
+ $var wire 1 1 io_in_valid $end
+ $var wire 4 2 result $end
+ $var wire 2 3 norm_exp $end
+ $var wire 2 4 b_exp $end
+ $var wire 1 5 out_valid_reg_r $end
+ $var wire 4 6 result_reg_r_1 $end
+ $var wire 1 7 out_valid_reg_r_1 $end
+ $var wire 3 8 aligned_a_man $end
+ $var wire 3 9 b_man $end
+ $var wire 1 : io_in_en $end
+ $var wire 3 ; a_man $end
+$upscope $end
+$enddefinitions $end
+$dumpvars
+01
+05
+07
+b00 0
+0:
+b00 .
+b00 4
+b00 3
+b00 )
+b000 9
+b000 8
+b00 !
+b000 ;
+b000 '
+b0000 %
+b0000 ,
+b0000 +
+b000 *
+b0000 &
+b0000 2
+0"
+0#
+0$
+b0000 /
+0(
+0-
+b0000 6
+$end
+#0
+b100 8
+b100 9
+b100 *
+b100 ;
+1-
+#1
+1(
+#6
+b10 !
+1"
+b111 '
+0(
+b01 )
+b010 *
+b0101 +
+b1001 ,
+0-
+b10 .
+b11 0
+11
+b1111 2
+b11 3
+b01 4
+b101 8
+b101 9
+1:
+b101 ;
+#11
+b1111 %
+15
+1(
+#16
+01
+0(
+0:
+#21
+1(
+#26
+0(
+#31
+1(
+#36
+0(

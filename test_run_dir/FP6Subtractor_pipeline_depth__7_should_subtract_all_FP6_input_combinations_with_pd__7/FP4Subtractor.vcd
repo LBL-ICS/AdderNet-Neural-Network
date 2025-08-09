@@ -1,0 +1,411 @@
+$date
+2025-07-17T21:53+0000
+$end
+$version
+0.2
+$end
+$comment
+
+$end
+$timescale 1ns  $end
+$scope module FP4Subtractor $end
+ $var wire 5 ! aligned_smaller_man $end
+ $var wire 1 " valid_reg $end
+ $var wire 1 # io_out_valid $end
+ $var wire 1 $ lzc_leftCount_leftCount_left $end
+ $var wire 5 % diff_man $end
+ $var wire 4 & final_man $end
+ $var wire 1 ' lzc_leftCount_right $end
+ $var wire 3 ( clamped_unbiased $end
+ $var wire 5 ) larger_man $end
+ $var wire 1 * reset $end
+ $var wire 2 + lzc_right $end
+ $var wire 1 , io_in_valid $end
+ $var wire 1 - lzc_rightCount_left $end
+ $var wire 7 . result $end
+ $var wire 2 / b_exp $end
+ $var wire 3 0 larger_unbiased $end
+ $var wire 5 1 smaller_man $end
+ $var wire 7 2 result_reg_r_4 $end
+ $var wire 7 3 result_reg_r_5 $end
+ $var wire 7 4 result_reg_r_2 $end
+ $var wire 7 5 result_reg_r_3 $end
+ $var wire 7 6 result_reg_r_1 $end
+ $var wire 1 7 valid_reg_r_1 $end
+ $var wire 1 8 valid_reg_r_2 $end
+ $var wire 3 9 lzc_left $end
+ $var wire 8 : norm_man_full $end
+ $var wire 1 ; lzc_leftCount_rightCount $end
+ $var wire 6 < b_mag $end
+ $var wire 1 = valid_reg_r_5 $end
+ $var wire 1 > valid_reg_r_3 $end
+ $var wire 1 ? valid_reg_r_4 $end
+ $var wire 4 @ b_man_raw $end
+ $var wire 1 A lzc_rightCount $end
+ $var wire 5 B b_man $end
+ $var wire 1 C lzc_leftCount_leftCount $end
+ $var wire 1 D result_zero $end
+ $var wire 1 E lzc_leftCount_leftCount_leftCount $end
+ $var wire 1 F valid_reg_r $end
+ $var wire 2 G smaller_exp $end
+ $var wire 2 H lzc_leftCount_left $end
+ $var wire 2 I lzc $end
+ $var wire 7 J result_reg_r $end
+ $var wire 7 K result_reg $end
+ $var wire 4 L a_man_raw $end
+ $var wire 1 M a_gte_b $end
+ $var wire 1 N lzc_leftCount_leftCount_rightCount $end
+ $var wire 1 O lzc_leftCount_leftCount_right $end
+ $var wire 1 P clock $end
+ $var wire 3 Q exp_diff $end
+ $var wire 6 R io_b $end
+ $var wire 6 S io_a $end
+ $var wire 1 T lzc_rightCount_leftCount $end
+ $var wire 2 U a_exp $end
+ $var wire 6 V io_out $end
+ $var wire 3 W norm_unbiased $end
+ $var wire 1 X lzc_rightCount_rightCount $end
+ $var wire 3 Y final_exp $end
+ $var wire 2 Z larger_exp $end
+ $var wire 1 [ io_in_en $end
+ $var wire 1 \ lzc_rightCount_right $end
+ $var wire 6 ] a_mag $end
+ $var wire 2 ^ lzc_leftCount $end
+ $var wire 5 _ a_man $end
+$upscope $end
+$enddefinitions $end
+$dumpvars
+07
+08
+b00 /
+0;
+0=
+0>
+b00000 !
+0?
+0A
+b00000 %
+0C
+0D
+0E
+0F
+b00000 )
+b00 +
+0M
+0N
+b00000 1
+0O
+0P
+b000000 V
+0T
+b000000 ]
+0X
+0[
+0\
+b000000 S
+b000000 R
+b0000 &
+b000 W
+b00000 B
+b000 Y
+b0000000 K
+b0000000 J
+b0000 @
+b000000 <
+b0000 L
+b000 Q
+b00000 _
+b00000000 :
+b000 9
+b0000000 3
+b0000000 2
+b0000000 5
+b00 ^
+b0000000 4
+b0000000 6
+b000 (
+b0000000 .
+b00 Z
+b000 0
+b00 U
+b00 I
+b00 H
+0"
+b00 G
+0#
+0$
+0'
+0*
+0,
+0-
+$end
+#0
+1D
+1E
+b111 (
+b11 I
+1*
+1M
+1N
+b111 0
+1T
+b100 W
+1X
+1;
+b11 ^
+#1
+1P
+#6
+0P
+0*
+1[
+1,
+#11
+1P
+1F
+#16
+0P
+0[
+0,
+#21
+1P
+#26
+0P
+#31
+1P
+#36
+0P
+#41
+1P
+#46
+0P
+#51
+1P
+#56
+0P
+#61
+1P
+#66
+0P
+#71
+1P
+#76
+b0001 @
+0P
+b000001 R
+1[
+1,
+b000001 <
+0M
+#81
+1P
+17
+#86
+0P
+0[
+0,
+#91
+1P
+#96
+0P
+#101
+1P
+#106
+0P
+#111
+1P
+#116
+0P
+#121
+1P
+#126
+0P
+#131
+1P
+#136
+0P
+#141
+1P
+#146
+b0010 @
+0P
+b000010 R
+1[
+1,
+b000010 <
+#151
+1P
+18
+#156
+0P
+0[
+0,
+#161
+1P
+#166
+0P
+#171
+1P
+#176
+0P
+#181
+1P
+#186
+0P
+#191
+1P
+#196
+0P
+#201
+1P
+#206
+0P
+#211
+1P
+#216
+b0011 @
+0P
+b000011 R
+1[
+1,
+b000011 <
+#221
+1P
+1>
+#226
+0P
+0[
+0,
+#231
+1P
+#236
+0P
+#241
+1P
+#246
+0P
+#251
+1P
+#256
+0P
+#261
+1P
+#266
+0P
+#271
+1P
+#276
+0P
+#281
+1P
+#286
+b0100 @
+0P
+b000100 R
+1[
+1,
+b000100 <
+#291
+1P
+1?
+#296
+0P
+0[
+0,
+#301
+1P
+#306
+0P
+#311
+1P
+#316
+0P
+#321
+1P
+#326
+0P
+#331
+1P
+#336
+0P
+#341
+1P
+#346
+0P
+#351
+1P
+#356
+b0101 @
+0P
+b000101 R
+1[
+1,
+b000101 <
+#361
+1P
+1=
+#366
+0P
+0[
+0,
+#371
+1P
+#376
+0P
+#381
+1P
+#386
+0P
+#391
+1P
+#396
+0P
+#401
+1P
+#406
+0P
+#411
+1P
+#416
+0P
+#421
+1P
+#426
+b0110 @
+0P
+b000110 R
+1[
+1,
+b000110 <
+#431
+1P
+1"
+1#
+#436
+0P
+0[
+0,
+#441
+1P
+#446
+0P
+#451
+1P
+#456
+0P
+#461
+1P
+#466
+0P
+#471
+1P
+#476
+0P
+#481
+1P
+#486
+0P
+#491
+1P
+#496
+0P

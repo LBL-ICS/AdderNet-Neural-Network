@@ -1,0 +1,110 @@
+$date
+2025-07-08T16:46+0000
+$end
+$version
+0.2
+$end
+$comment
+
+$end
+$timescale 1ns  $end
+$scope module FP4Subtractor $end
+ $var wire 2 ! aligned_exp $end
+ $var wire 1 " shift_amount_leftCount_right $end
+ $var wire 1 # shift_amount_leftCount_left $end
+ $var wire 1 $ valid_reg $end
+ $var wire 1 % io_out_valid $end
+ $var wire 1 & shift_amount_rightCount $end
+ $var wire 1 ' shift_amount_leftCount_leftAllZeros $end
+ $var wire 4 ( result_reg $end
+ $var wire 6 ) norm_man $end
+ $var wire 3 * abs_diff $end
+ $var wire 1 + clock $end
+ $var wire 2 , exp_diff $end
+ $var wire 3 - aligned_b_man $end
+ $var wire 4 . io_b $end
+ $var wire 4 / io_a $end
+ $var wire 1 0 reset $end
+ $var wire 1 1 shift_amount_leftCount_rightCount $end
+ $var wire 2 2 a_exp $end
+ $var wire 4 3 io_out $end
+ $var wire 1 4 io_in_valid $end
+ $var wire 3 5 diff_sint $end
+ $var wire 4 6 result $end
+ $var wire 2 7 norm_exp $end
+ $var wire 2 8 b_exp $end
+ $var wire 2 9 shift_amount_left $end
+ $var wire 3 : aligned_a_man $end
+ $var wire 1 ; shift_amount_leftCount $end
+ $var wire 3 < b_man $end
+ $var wire 1 = io_in_en $end
+ $var wire 1 > shift_amount_right $end
+ $var wire 1 ? shift_amount_leftCount_leftCount $end
+ $var wire 2 @ shift_amount $end
+ $var wire 1 A shift_amount_leftAllZeros $end
+ $var wire 3 B a_man $end
+$upscope $end
+$enddefinitions $end
+$dumpvars
+00
+b00 9
+01
+b00 8
+b00 7
+04
+b000 B
+0;
+0=
+0>
+0?
+b00 2
+0A
+b000000 )
+b00 ,
+b000 5
+b00 !
+b000 :
+b000 <
+b0000 (
+b000 *
+b000 -
+0"
+b0000 3
+0#
+0$
+0%
+b0000 .
+0&
+b0000 /
+0'
+b00 @
+0+
+b0000 6
+$end
+#0
+10
+b11 @
+11
+1A
+b100 B
+1&
+1'
+b100 :
+b100 <
+b100 -
+1?
+#1
+1+
+#6
+00
+14
+0+
+1=
+#11
+1$
+1%
+1+
+#16
+04
+0+
+0=

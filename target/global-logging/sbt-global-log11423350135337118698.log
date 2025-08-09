@@ -1,0 +1,95 @@
+[debug] > Exec(early(addDefaultCommands), None, None)
+[debug] > Exec(addDefaultCommands, None, None)
+[debug] > Exec(early(initialize), None, None)
+[debug] > Exec(initialize, None, None)
+[debug] > Exec(early(addPluginSbtFile="""C:\Users\josea\AppData\Local\Temp\idea.sbt"""), None, None)
+[debug] > Exec(addPluginSbtFile="""C:\Users\josea\AppData\Local\Temp\idea.sbt""", None, None)
+[debug] > Exec(boot, None, None)
+[debug] > Exec(writeSbtVersion, None, None)
+[debug] > Exec(reload, None, None)
+[debug] > Exec(sbtStashOnFailure, None, None)
+[debug] > Exec(onFailure loadFailed, None, None)
+[debug] > Exec(loadp, None, None)
+[info] welcome to sbt 1.6.2 (Eclipse Adoptium Java 11.0.27)
+[debug] Load.defaultLoad until apply took 318.0294ms
+[debug]           Load.loadUnit: plugins took 69.9659ms
+[debug]           Load.loadUnit: defsScala took 0.2229ms
+[debug] [Loading] Scanning directory C:\Users\josea\OneDrive\Desktop\REU Project Working\Chisel-for-Fundamental-IC\project
+[debug]             Load.loadUnit: mkEval took 4.5675ms
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in C:\Users\josea\OneDrive\Desktop\REU Project Working\Chisel-for-Fundamental-IC\project, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 10.7999 ms
+[info] loading settings for project chisel-for-fundamental-ic-build from idea.sbt ...
+[debug]               Load.resolveProject(chisel-for-fundamental-ic-build) took 39.4382ms
+[debug]             Load.loadTransitive: finalizeProject(Project(id chisel-for-fundamental-ic-build, base: C:\Users\josea\OneDrive\Desktop\REU Project Working\Chisel-for-Fundamental-IC\project, plugins: List(<none>))) took 67.3004ms
+[debug] [Loading] Done in C:\Users\josea\OneDrive\Desktop\REU Project Working\Chisel-for-Fundamental-IC\project, returning: (chisel-for-fundamental-ic-build)
+[debug]           Load.loadUnit: loadedProjectsRaw took 254.0463ms
+[debug]           Load.loadUnit: cleanEvalClasses took 6.7228ms
+[debug]         Load.loadUnit(file:/C:/Users/josea/OneDrive/Desktop/REU%20Project%20Working/Chisel-for-Fundamental-IC/project/, ...) took 335.2375ms
+[debug]       Load.apply: load took 448.1762ms
+[debug]       Load.apply: resolveProjects took 3.6493ms
+[debug]       Load.apply: finalTransforms took 41.0127ms
+[debug]       Load.apply: config.delegates took 11.5108ms
+[debug]       Load.apply: Def.make(settings)... took 413.6172ms
+[debug]       Load.apply: structureIndex took 107.1855ms
+[debug]       Load.apply: mkStreams took 3.6934ms
+[info] loading project definition from C:\Users\josea\OneDrive\Desktop\REU Project Working\Chisel-for-Fundamental-IC\project
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug]     Load.loadUnit: plugins took 3092.5855ms
+[debug]     Load.loadUnit: defsScala took 0.0029ms
+[debug] [Loading] Scanning directory C:\Users\josea\OneDrive\Desktop\REU Project Working\Chisel-for-Fundamental-IC
+[debug]       Load.loadUnit: mkEval took 0.26ms
+[debug] [Loading] Found root project root w/ remaining 
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(org.jetbrains.sbt.GenerateAllManagedSourcesPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(org.jetbrains.sbt.StructurePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(org.jetbrains.sbt.IdeaShellPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(org.jetbrains.sbt.GenerateAllManagedSourcesPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(org.jetbrains.sbt.StructurePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(org.jetbrains.sbt.IdeaShellPlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,org.jetbrains.sbt.GenerateAllManagedSourcesPlugin,sbt.plugins.SemanticdbPlugin,sbt.plugins.JUnitXmlReportPlugin,org.jetbrains.sbt.IdeaShellPlugin,org.jetbrains.sbt.StructurePlugin,sbt.plugins.MiniDependencyTreePlugin)
+[debug] Plugins.deducer#function took 2.0267 ms
+[info] loading settings for project root from build.sbt ...
+[debug]         Load.resolveProject(root) took 38.9775ms
+[debug]       Load.loadTransitive: finalizeProject(Project(id root, base: C:\Users\josea\OneDrive\Desktop\REU Project Working\Chisel-for-Fundamental-IC, plugins: List(<none>))) took 42.4995ms
+[debug] [Loading] Done in C:\Users\josea\OneDrive\Desktop\REU Project Working\Chisel-for-Fundamental-IC, returning: (root)
+[debug]     Load.loadUnit: loadedProjectsRaw took 2225.1634ms
+[debug]     Load.loadUnit: cleanEvalClasses took 10.0445ms
+[debug]   Load.loadUnit(file:/C:/Users/josea/OneDrive/Desktop/REU%20Project%20Working/Chisel-for-Fundamental-IC/, ...) took 5328.8161ms
+[debug] Load.apply: load took 5345.4762ms
+[debug] Load.apply: resolveProjects took 0.0854ms
+[debug] Load.apply: finalTransforms took 32.968ms
+[debug] Load.apply: config.delegates took 0.3533ms
+[debug] Load.apply: Def.make(settings)... took 73.7219ms
+[debug] Load.apply: structureIndex took 17.1501ms
+[debug] Load.apply: mkStreams took 0.0027ms
+[info] set current project to Fundamental-IC-ChiselHCL (in build file:/C:/Users/josea/OneDrive/Desktop/REU%20Project%20Working/Chisel-for-Fundamental-IC/)
+[debug] > Exec(sbtPopOnFailure, None, None)
+[debug] > Exec(resumeFromFailure, None, None)
+[debug] > Exec(notifyUsersAboutShell, None, None)
+[debug] > Exec(iflast shell, None, None)
+[debug] > Exec(idea-shell, None, None)
