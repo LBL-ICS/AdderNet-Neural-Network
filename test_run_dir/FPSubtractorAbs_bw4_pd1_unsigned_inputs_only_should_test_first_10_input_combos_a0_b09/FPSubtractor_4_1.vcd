@@ -1,5 +1,5 @@
 $date
-2025-08-09T22:55+0000
+2025-08-12T21:06+0000
 $end
 $version
 0.2
@@ -13,272 +13,289 @@ $scope module FPSubtractor_4_1 $end
  $var wire 4 " io_in_b $end
  $var wire 1 # io_valid_in $end
  $var wire 1 $ io_valid_out $end
- $var wire 1 % lzc $end
- $var wire 1 & manA $end
- $var wire 2 ' maxExp $end
- $var wire 1 ( manB $end
- $var wire 3 ) alignedB $end
- $var wire 3 * alignedA $end
- $var wire 2 + expDiff $end
- $var wire 3 , diff $end
- $var wire 4 - sr_array_0 $end
- $var wire 1 . clock $end
- $var wire 1 / normalizedMant $end
- $var wire 3 0 aExt $end
- $var wire 4 1 aVal $end
- $var wire 1 3 reset $end
- $var wire 4 4 io_out $end
- $var wire 4 5 result $end
- $var wire 2 6 bExt_hi $end
- $var wire 6 7 normalizedMantFull $end
- $var wire 3 8 result_hi $end
- $var wire 2 9 expB $end
- $var wire 2 : expA $end
- $var wire 2 ; aExt_hi $end
- $var wire 3 < bExt $end
- $var wire 4 = bVal $end
- $var wire 1 ? valid_sr_0 $end
- $var wire 2 @ adjustedExp $end
+ $var wire 1 & lzc $end
+ $var wire 1 ' manA $end
+ $var wire 2 ( maxExp $end
+ $var wire 1 ) manB $end
+ $var wire 3 * alignedB $end
+ $var wire 3 + alignedA $end
+ $var wire 2 , expDiff $end
+ $var wire 3 - diff $end
+ $var wire 4 . sr_array_0 $end
+ $var wire 1 / clock $end
+ $var wire 1 0 normalizedMant $end
+ $var wire 3 1 aExt $end
+ $var wire 4 2 aVal $end
+ $var wire 1 4 reset $end
+ $var wire 4 5 io_out $end
+ $var wire 4 7 result $end
+ $var wire 2 8 bExt_hi $end
+ $var wire 6 9 normalizedMantFull $end
+ $var wire 3 : result_hi $end
+ $var wire 2 ; expB $end
+ $var wire 2 < expA $end
+ $var wire 2 = aExt_hi $end
+ $var wire 3 > bExt $end
+ $var wire 4 ? bVal $end
+ $var wire 1 A valid_sr_0 $end
+ $var wire 2 B adjustedExp $end
   $scope module lzc $end
-   $var wire 2 2 io_out $end
-   $var wire 3 > io_in $end
+   $var wire 3 % rev $end
+   $var wire 2 3 io_out $end
+   $var wire 1 6 any $end
+   $var wire 3 @ io_in $end
   $upscope $end
 $upscope $end
 $enddefinitions $end
 $dumpvars
-b00 9
-b000000 7
-03
-b00 6
+00
+b00 8
+b000000 9
+04
+b00 =
+b00 <
+06
 b00 ;
-b00 :
-0?
-b00 2
-b00 '
-b000 8
-b00 +
+b0000 ?
+b00 3
+0A
+b00 (
+b00 ,
 b000 >
-b000 <
+b000 @
+b000 :
 b0000 "
-b000 )
 b0000 !
-b0000 -
-b000 0
+b000 %
+b000 1
+b000 +
 b000 *
-b000 ,
-b0000 4
+b000 -
 b0000 5
+b0000 2
 0#
 0$
-b0000 1
-0%
+b0000 .
 0&
-0(
-b0000 =
-b00 @
-0.
+0'
+0)
+b0000 7
 0/
+b00 B
 $end
 #0
-b100 0
-b10 2
-13
-b10 6
-b100 )
+b100 1
+b11 3
+14
+b10 8
 b100 *
-b10 ;
-b100 <
+b100 +
+b10 =
+b100 >
 #1
-1.
+1/
 #6
 1#
-03
-0.
+04
+0/
 #11
+1A
 1$
-1.
-1?
+1/
 #16
-b110 0
-b0001 1
+b010 @
 b0001 "
-b01 2
-1&
-b000100 7
-b110 *
-b11 ;
-b010 ,
-0.
-b010 >
+b010 %
+1'
+b110 +
+b010 -
+0/
+b110 1
+b0001 2
+b01 3
+16
+b000100 9
+b11 =
 #21
-1.
+1/
 #26
-b100 0
-b0010 1
+b100 1
 b0010 "
-0&
-b01 '
-b010 )
-b100 *
-b01 :
-b01 +
-b10 ;
-0.
+b0010 2
+0'
+b01 (
+b010 *
+b100 +
+b01 ,
+b01 <
+b10 =
+0/
 #31
-1.
+1/
 #36
-b01 @
+b100 @
 b0011 "
-1&
-b110 *
-b100 ,
-0.
-b110 0
-b0011 1
-b00 2
-b0010 5
-b001 8
-b11 ;
-b100 >
+b01 B
+b001 %
+1'
+b110 +
+b100 -
+0/
+b110 1
+b0011 2
+b00 3
+b0010 7
+b001 :
+b11 =
 #41
-b0010 4
-b0010 -
-1.
+b0010 5
+b0010 .
+1/
 #46
+b011 @
 b0100 "
-0&
-b10 '
-b001 )
-b100 *
-b10 +
-b011 ,
-0.
-1/
-b100 0
-b0100 1
-b01 2
-b0011 5
-b000110 7
-b10 :
-b10 ;
-b011 >
+b110 %
+0'
+b10 (
+b001 *
+b100 +
+b10 ,
+b011 -
+0/
+10
+b100 1
+b0100 2
+b01 3
+b0011 7
+b000110 9
+b10 <
+b10 =
 #51
-b0011 4
-b0011 -
-1.
-#56
-b10 @
-b0101 "
-1&
-b110 *
-b101 ,
-0.
-0/
-b110 0
-b0101 1
-b00 2
-b0100 5
-b000101 7
-b010 8
-b11 ;
-b101 >
-#61
-b0100 4
-b0100 -
-1.
-#66
-b11 @
-b0110 "
-0&
-b11 '
-b000 )
-b100 *
-b11 +
-b100 ,
-0.
-b100 0
-b0110 1
-b0110 5
-b000100 7
-b011 8
-b11 :
-b10 ;
-b100 >
-#71
-b0110 4
-b0110 -
-1.
-#76
-b0111 "
-1&
-b110 *
-b110 ,
-0.
+b0011 5
+b0011 .
 1/
-b110 0
-b0111 1
-b0111 5
-b000110 7
-b11 ;
-b110 >
-#81
-b0111 4
-b0111 -
-1.
-#86
-b00 @
-b1000 "
-0&
-b00 '
-b100 )
-b100 *
-b00 +
-b000 ,
-0.
+#56
+b101 @
+b0101 "
+b10 B
+b101 %
+1'
+b110 +
+b101 -
 0/
-b100 0
-b1000 1
-b10 2
-b0000 5
-b000000 7
-b000 8
-b00 :
-b10 ;
-b000 >
+00
+b110 1
+b0101 2
+b00 3
+b0100 7
+b000101 9
+b010 :
+b11 =
+#61
+b0100 5
+b0100 .
+1/
+#66
+b100 @
+b0110 "
+b11 B
+b001 %
+0'
+b11 (
+b000 *
+b100 +
+b11 ,
+b100 -
+0/
+b100 1
+b0110 2
+b0110 7
+b000100 9
+b011 :
+b11 <
+b10 =
+#71
+b0110 5
+b0110 .
+1/
+#76
+b110 @
+b0111 "
+b011 %
+1'
+b110 +
+b110 -
+0/
+10
+b110 1
+b0111 2
+b0111 7
+b000110 9
+b11 =
+#81
+b0111 5
+b0111 .
+1/
+#86
+b000 @
+b1000 "
+b00 B
+b000 %
+0'
+b00 (
+b100 *
+b100 +
+b00 ,
+b000 -
+0/
+00
+b100 1
+b1000 2
+b11 3
+06
+b0000 7
+b000000 9
+b000 :
+b00 <
+b10 =
 #91
-b0000 4
-b0000 -
-1.
+b0000 5
+b0000 .
+1/
 #96
-b110 0
-b1001 1
+b010 @
 b1001 "
-b01 2
-1&
-b000100 7
-b110 *
-b11 ;
-b010 ,
-0.
-b010 >
+b010 %
+1'
+b110 +
+b010 -
+0/
+b110 1
+b1001 2
+b01 3
+16
+b000100 9
+b11 =
 #101
-1.
+1/
 #106
+b000 @
 b0000 "
 0#
-0&
-b100 *
-b000 ,
-0.
-b100 0
-b0000 1
-b10 2
-b000000 7
-b10 ;
-b000 >
+b000 %
+0'
+b100 +
+b000 -
+0/
+b100 1
+b0000 2
+b11 3
+06
+b000000 9
+b10 =
 #111
+0A
 0$
-1.
-0?
+1/
 #116
-0.
+0/

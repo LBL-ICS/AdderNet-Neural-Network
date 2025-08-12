@@ -50,148 +50,150 @@
   `endif // not def ENABLE_INITIAL_MEM_
 `endif // not def SYNTHESIS
 
-module LZC(	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:221:7
-  input  [4:0] io_in,	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:222:14
-  output [2:0] io_out	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:222:14
+module LZC(	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:231:7
+  input  [4:0] io_in,	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:232:14
+  output [2:0] io_out	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:232:14
 );
 
   assign io_out =
-    io_in[4] ? 3'h0 : io_in[3] ? 3'h1 : io_in[2] ? 3'h2 : io_in[1] ? 3'h3 : 3'h4;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:221:7, :227:35, src/main/scala/chisel3/util/Mux.scala:50:70
+    (|{io_in[0], io_in[1], io_in[2], io_in[3], io_in[4]})
+      ? (io_in[4] ? 3'h0 : io_in[3] ? 3'h1 : io_in[2] ? 3'h2 : io_in[1] ? 3'h3 : 3'h4)
+      : 3'h5;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:231:7, :237:22, :238:19, :240:19, src/main/scala/chisel3/util/Mux.scala:50:70
 endmodule
 
-module FPSubtractor_6_10(	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:365:7
-  input        clock,	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:365:7
-               reset,	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:365:7
-  input  [5:0] io_in_a,	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:368:14
-               io_in_b,	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:368:14
-  input        io_valid_in,	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:368:14
-  output [5:0] io_out,	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:368:14
-  output       io_valid_out	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:368:14
+module FPSubtractor_6_10(	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:453:7
+  input        clock,	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:453:7
+               reset,	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:453:7
+  input  [5:0] io_in_a,	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:456:14
+               io_in_b,	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:456:14
+  input        io_valid_in,	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:456:14
+  output [5:0] io_out,	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:456:14
+  output       io_valid_out	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:456:14
 );
 
-  wire [2:0] _lzc_io_out;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:416:19
-  wire       _GEN = io_in_a >= io_in_b;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:382:16
-  wire [4:0] aVal = _GEN ? io_in_a[4:0] : io_in_b[4:0];	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:368:14, :382:{16,28}, :383:10, :386:10
-  wire [4:0] bVal = _GEN ? io_in_b[4:0] : io_in_a[4:0];	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:368:14, :382:{16,28}, :384:10, :387:10
-  wire       _expDiff_T = aVal[4:3] >= bVal[4:3];	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:382:28, :383:10, :384:10, :386:10, :387:10, :390:18, :392:18, :395:26
-  wire [4:0] aExt = {1'h1, aVal[2:0], 1'h0};	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:382:28, :383:10, :386:10, :391:18, :397:17
-  wire [4:0] bExt = {1'h1, bVal[2:0], 1'h0};	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:382:28, :384:10, :387:10, :393:18, :397:17, :398:17
-  wire [4:0] _GEN_0 = {3'h0, _expDiff_T ? aVal[4:3] - bVal[4:3] : bVal[4:3] - aVal[4:3]};	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:382:28, :383:10, :384:10, :386:10, :387:10, :390:18, :392:18, :395:{20,26,40,53}, :406:22, :423:24
+  wire [2:0] _lzc_io_out;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:504:19
+  wire       _GEN = io_in_a >= io_in_b;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:470:16
+  wire [4:0] aVal = _GEN ? io_in_a[4:0] : io_in_b[4:0];	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:456:14, :470:{16,28}, :471:10, :474:10
+  wire [4:0] bVal = _GEN ? io_in_b[4:0] : io_in_a[4:0];	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:456:14, :470:{16,28}, :472:10, :475:10
+  wire       _expDiff_T = aVal[4:3] >= bVal[4:3];	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:470:28, :471:10, :472:10, :474:10, :475:10, :478:18, :480:18, :483:26
+  wire [4:0] aExt = {1'h1, aVal[2:0], 1'h0};	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:470:28, :471:10, :474:10, :479:18, :485:17
+  wire [4:0] bExt = {1'h1, bVal[2:0], 1'h0};	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:470:28, :472:10, :475:10, :481:18, :485:17, :486:17
+  wire [4:0] _GEN_0 = {3'h0, _expDiff_T ? aVal[4:3] - bVal[4:3] : bVal[4:3] - aVal[4:3]};	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:470:28, :471:10, :472:10, :474:10, :475:10, :478:18, :480:18, :483:{20,26,40,53}, :494:22, :511:24
   wire [4:0] _diff_T =
-    (_expDiff_T ? aExt : aExt >> _GEN_0) - (_expDiff_T ? bExt >> _GEN_0 : bExt);	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:395:26, :397:17, :398:17, :404:22, :405:14, :406:{14,22}, :409:{14,22}, :410:14, :414:23
-  reg  [5:0] sr_array_0;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:426:25
-  reg  [5:0] sr_array_1;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:426:25
-  reg  [5:0] sr_array_2;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:426:25
-  reg  [5:0] sr_array_3;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:426:25
-  reg  [5:0] sr_array_4;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:426:25
-  reg  [5:0] sr_array_5;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:426:25
-  reg  [5:0] sr_array_6;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:426:25
-  reg  [5:0] sr_array_7;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:426:25
-  reg  [5:0] sr_array_8;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:426:25
-  reg  [5:0] sr_array_9;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:426:25
-  reg        valid_sr_0;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:427:25
-  reg        valid_sr_1;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:427:25
-  reg        valid_sr_2;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:427:25
-  reg        valid_sr_3;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:427:25
-  reg        valid_sr_4;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:427:25
-  reg        valid_sr_5;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:427:25
-  reg        valid_sr_6;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:427:25
-  reg        valid_sr_7;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:427:25
-  reg        valid_sr_8;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:427:25
-  reg        valid_sr_9;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:427:25
-  always @(posedge clock) begin	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:365:7
-    if (reset) begin	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:365:7
-      sr_array_0 <= 6'h0;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:426:{25,33}
-      sr_array_1 <= 6'h0;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:426:{25,33}
-      sr_array_2 <= 6'h0;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:426:{25,33}
-      sr_array_3 <= 6'h0;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:426:{25,33}
-      sr_array_4 <= 6'h0;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:426:{25,33}
-      sr_array_5 <= 6'h0;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:426:{25,33}
-      sr_array_6 <= 6'h0;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:426:{25,33}
-      sr_array_7 <= 6'h0;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:426:{25,33}
-      sr_array_8 <= 6'h0;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:426:{25,33}
-      sr_array_9 <= 6'h0;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:426:{25,33}
-      valid_sr_0 <= 1'h0;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:397:17, :427:25
-      valid_sr_1 <= 1'h0;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:397:17, :427:25
-      valid_sr_2 <= 1'h0;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:397:17, :427:25
-      valid_sr_3 <= 1'h0;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:397:17, :427:25
-      valid_sr_4 <= 1'h0;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:397:17, :427:25
-      valid_sr_5 <= 1'h0;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:397:17, :427:25
-      valid_sr_6 <= 1'h0;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:397:17, :427:25
-      valid_sr_7 <= 1'h0;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:397:17, :427:25
-      valid_sr_8 <= 1'h0;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:397:17, :427:25
-      valid_sr_9 <= 1'h0;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:397:17, :427:25
+    (_expDiff_T ? aExt : aExt >> _GEN_0) - (_expDiff_T ? bExt >> _GEN_0 : bExt);	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:483:26, :485:17, :486:17, :492:22, :493:14, :494:{14,22}, :497:{14,22}, :498:14, :502:23
+  reg  [5:0] sr_array_0;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:514:25
+  reg  [5:0] sr_array_1;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:514:25
+  reg  [5:0] sr_array_2;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:514:25
+  reg  [5:0] sr_array_3;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:514:25
+  reg  [5:0] sr_array_4;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:514:25
+  reg  [5:0] sr_array_5;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:514:25
+  reg  [5:0] sr_array_6;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:514:25
+  reg  [5:0] sr_array_7;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:514:25
+  reg  [5:0] sr_array_8;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:514:25
+  reg  [5:0] sr_array_9;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:514:25
+  reg        valid_sr_0;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:515:25
+  reg        valid_sr_1;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:515:25
+  reg        valid_sr_2;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:515:25
+  reg        valid_sr_3;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:515:25
+  reg        valid_sr_4;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:515:25
+  reg        valid_sr_5;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:515:25
+  reg        valid_sr_6;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:515:25
+  reg        valid_sr_7;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:515:25
+  reg        valid_sr_8;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:515:25
+  reg        valid_sr_9;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:515:25
+  always @(posedge clock) begin	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:453:7
+    if (reset) begin	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:453:7
+      sr_array_0 <= 6'h0;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:514:{25,33}
+      sr_array_1 <= 6'h0;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:514:{25,33}
+      sr_array_2 <= 6'h0;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:514:{25,33}
+      sr_array_3 <= 6'h0;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:514:{25,33}
+      sr_array_4 <= 6'h0;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:514:{25,33}
+      sr_array_5 <= 6'h0;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:514:{25,33}
+      sr_array_6 <= 6'h0;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:514:{25,33}
+      sr_array_7 <= 6'h0;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:514:{25,33}
+      sr_array_8 <= 6'h0;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:514:{25,33}
+      sr_array_9 <= 6'h0;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:514:{25,33}
+      valid_sr_0 <= 1'h0;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:485:17, :515:25
+      valid_sr_1 <= 1'h0;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:485:17, :515:25
+      valid_sr_2 <= 1'h0;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:485:17, :515:25
+      valid_sr_3 <= 1'h0;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:485:17, :515:25
+      valid_sr_4 <= 1'h0;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:485:17, :515:25
+      valid_sr_5 <= 1'h0;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:485:17, :515:25
+      valid_sr_6 <= 1'h0;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:485:17, :515:25
+      valid_sr_7 <= 1'h0;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:485:17, :515:25
+      valid_sr_8 <= 1'h0;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:485:17, :515:25
+      valid_sr_9 <= 1'h0;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:485:17, :515:25
     end
-    else begin	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:365:7
-      automatic logic [2:0]  _GEN_1 = {1'h0, _expDiff_T ? aVal[4:3] : bVal[4:3]};	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:382:28, :383:10, :384:10, :386:10, :387:10, :390:18, :392:18, :395:26, :397:17, :404:22, :407:12, :411:12, :423:32
-      automatic logic [11:0] normalizedMantFull = {7'h0, _diff_T} << _lzc_io_out;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:414:23, :416:19, :420:33
+    else begin	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:453:7
+      automatic logic [2:0]  _GEN_1 = {1'h0, _expDiff_T ? aVal[4:3] : bVal[4:3]};	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:470:28, :471:10, :472:10, :474:10, :475:10, :478:18, :480:18, :483:26, :485:17, :492:22, :495:12, :499:12, :511:32
+      automatic logic [11:0] normalizedMantFull = {7'h0, _diff_T} << _lzc_io_out;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:502:23, :504:19, :508:33
       sr_array_0 <=
-        {_GEN_1 >= _lzc_io_out ? _GEN_1 - _lzc_io_out : 3'h0, normalizedMantFull[3:1]};	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:416:19, :420:33, :421:42, :423:{24,32,49}, :426:25, :429:15
-      sr_array_1 <= sr_array_0;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:426:25
-      sr_array_2 <= sr_array_1;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:426:25
-      sr_array_3 <= sr_array_2;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:426:25
-      sr_array_4 <= sr_array_3;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:426:25
-      sr_array_5 <= sr_array_4;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:426:25
-      sr_array_6 <= sr_array_5;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:426:25
-      sr_array_7 <= sr_array_6;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:426:25
-      sr_array_8 <= sr_array_7;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:426:25
-      sr_array_9 <= sr_array_8;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:426:25
-      valid_sr_0 <= io_valid_in;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:427:25
-      valid_sr_1 <= valid_sr_0;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:427:25
-      valid_sr_2 <= valid_sr_1;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:427:25
-      valid_sr_3 <= valid_sr_2;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:427:25
-      valid_sr_4 <= valid_sr_3;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:427:25
-      valid_sr_5 <= valid_sr_4;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:427:25
-      valid_sr_6 <= valid_sr_5;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:427:25
-      valid_sr_7 <= valid_sr_6;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:427:25
-      valid_sr_8 <= valid_sr_7;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:427:25
-      valid_sr_9 <= valid_sr_8;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:427:25
+        {_GEN_1 >= _lzc_io_out ? _GEN_1 - _lzc_io_out : 3'h0, normalizedMantFull[3:1]};	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:504:19, :508:33, :509:42, :511:{24,32,49}, :514:25, :517:15
+      sr_array_1 <= sr_array_0;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:514:25
+      sr_array_2 <= sr_array_1;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:514:25
+      sr_array_3 <= sr_array_2;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:514:25
+      sr_array_4 <= sr_array_3;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:514:25
+      sr_array_5 <= sr_array_4;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:514:25
+      sr_array_6 <= sr_array_5;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:514:25
+      sr_array_7 <= sr_array_6;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:514:25
+      sr_array_8 <= sr_array_7;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:514:25
+      sr_array_9 <= sr_array_8;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:514:25
+      valid_sr_0 <= io_valid_in;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:515:25
+      valid_sr_1 <= valid_sr_0;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:515:25
+      valid_sr_2 <= valid_sr_1;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:515:25
+      valid_sr_3 <= valid_sr_2;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:515:25
+      valid_sr_4 <= valid_sr_3;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:515:25
+      valid_sr_5 <= valid_sr_4;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:515:25
+      valid_sr_6 <= valid_sr_5;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:515:25
+      valid_sr_7 <= valid_sr_6;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:515:25
+      valid_sr_8 <= valid_sr_7;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:515:25
+      valid_sr_9 <= valid_sr_8;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:515:25
     end
   end // always @(posedge)
-  `ifdef ENABLE_INITIAL_REG_	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:365:7
-    `ifdef FIRRTL_BEFORE_INITIAL	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:365:7
-      `FIRRTL_BEFORE_INITIAL	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:365:7
+  `ifdef ENABLE_INITIAL_REG_	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:453:7
+    `ifdef FIRRTL_BEFORE_INITIAL	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:453:7
+      `FIRRTL_BEFORE_INITIAL	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:453:7
     `endif // FIRRTL_BEFORE_INITIAL
-    initial begin	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:365:7
-      automatic logic [31:0] _RANDOM[0:2];	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:365:7
-      `ifdef INIT_RANDOM_PROLOG_	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:365:7
-        `INIT_RANDOM_PROLOG_	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:365:7
+    initial begin	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:453:7
+      automatic logic [31:0] _RANDOM[0:2];	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:453:7
+      `ifdef INIT_RANDOM_PROLOG_	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:453:7
+        `INIT_RANDOM_PROLOG_	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:453:7
       `endif // INIT_RANDOM_PROLOG_
-      `ifdef RANDOMIZE_REG_INIT	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:365:7
+      `ifdef RANDOMIZE_REG_INIT	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:453:7
         for (logic [1:0] i = 2'h0; i < 2'h3; i += 2'h1) begin
-          _RANDOM[i] = `RANDOM;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:365:7
-        end	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:365:7
-        sr_array_0 = _RANDOM[2'h0][5:0];	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:365:7, :426:25
-        sr_array_1 = _RANDOM[2'h0][11:6];	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:365:7, :426:25
-        sr_array_2 = _RANDOM[2'h0][17:12];	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:365:7, :426:25
-        sr_array_3 = _RANDOM[2'h0][23:18];	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:365:7, :426:25
-        sr_array_4 = _RANDOM[2'h0][29:24];	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:365:7, :426:25
-        sr_array_5 = {_RANDOM[2'h0][31:30], _RANDOM[2'h1][3:0]};	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:365:7, :426:25
-        sr_array_6 = _RANDOM[2'h1][9:4];	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:365:7, :426:25
-        sr_array_7 = _RANDOM[2'h1][15:10];	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:365:7, :426:25
-        sr_array_8 = _RANDOM[2'h1][21:16];	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:365:7, :426:25
-        sr_array_9 = _RANDOM[2'h1][27:22];	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:365:7, :426:25
-        valid_sr_0 = _RANDOM[2'h1][28];	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:365:7, :426:25, :427:25
-        valid_sr_1 = _RANDOM[2'h1][29];	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:365:7, :426:25, :427:25
-        valid_sr_2 = _RANDOM[2'h1][30];	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:365:7, :426:25, :427:25
-        valid_sr_3 = _RANDOM[2'h1][31];	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:365:7, :426:25, :427:25
-        valid_sr_4 = _RANDOM[2'h2][0];	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:365:7, :427:25
-        valid_sr_5 = _RANDOM[2'h2][1];	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:365:7, :427:25
-        valid_sr_6 = _RANDOM[2'h2][2];	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:365:7, :427:25
-        valid_sr_7 = _RANDOM[2'h2][3];	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:365:7, :427:25
-        valid_sr_8 = _RANDOM[2'h2][4];	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:365:7, :427:25
-        valid_sr_9 = _RANDOM[2'h2][5];	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:365:7, :427:25
+          _RANDOM[i] = `RANDOM;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:453:7
+        end	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:453:7
+        sr_array_0 = _RANDOM[2'h0][5:0];	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:453:7, :514:25
+        sr_array_1 = _RANDOM[2'h0][11:6];	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:453:7, :514:25
+        sr_array_2 = _RANDOM[2'h0][17:12];	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:453:7, :514:25
+        sr_array_3 = _RANDOM[2'h0][23:18];	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:453:7, :514:25
+        sr_array_4 = _RANDOM[2'h0][29:24];	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:453:7, :514:25
+        sr_array_5 = {_RANDOM[2'h0][31:30], _RANDOM[2'h1][3:0]};	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:453:7, :514:25
+        sr_array_6 = _RANDOM[2'h1][9:4];	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:453:7, :514:25
+        sr_array_7 = _RANDOM[2'h1][15:10];	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:453:7, :514:25
+        sr_array_8 = _RANDOM[2'h1][21:16];	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:453:7, :514:25
+        sr_array_9 = _RANDOM[2'h1][27:22];	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:453:7, :514:25
+        valid_sr_0 = _RANDOM[2'h1][28];	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:453:7, :514:25, :515:25
+        valid_sr_1 = _RANDOM[2'h1][29];	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:453:7, :514:25, :515:25
+        valid_sr_2 = _RANDOM[2'h1][30];	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:453:7, :514:25, :515:25
+        valid_sr_3 = _RANDOM[2'h1][31];	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:453:7, :514:25, :515:25
+        valid_sr_4 = _RANDOM[2'h2][0];	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:453:7, :515:25
+        valid_sr_5 = _RANDOM[2'h2][1];	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:453:7, :515:25
+        valid_sr_6 = _RANDOM[2'h2][2];	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:453:7, :515:25
+        valid_sr_7 = _RANDOM[2'h2][3];	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:453:7, :515:25
+        valid_sr_8 = _RANDOM[2'h2][4];	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:453:7, :515:25
+        valid_sr_9 = _RANDOM[2'h2][5];	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:453:7, :515:25
       `endif // RANDOMIZE_REG_INIT
     end // initial
-    `ifdef FIRRTL_AFTER_INITIAL	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:365:7
-      `FIRRTL_AFTER_INITIAL	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:365:7
+    `ifdef FIRRTL_AFTER_INITIAL	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:453:7
+      `FIRRTL_AFTER_INITIAL	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:453:7
     `endif // FIRRTL_AFTER_INITIAL
   `endif // ENABLE_INITIAL_REG_
-  LZC lzc (	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:416:19
-    .io_in  (_diff_T),	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:414:23
+  LZC lzc (	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:504:19
+    .io_in  (_diff_T),	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:502:23
     .io_out (_lzc_io_out)
   );
-  assign io_out = sr_array_9;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:365:7, :426:25
-  assign io_valid_out = valid_sr_9;	// C:\\Users\\josea\\IdeaProjects\\AdderNet-Neural-Network\\src\\main\\scala\\Fundamental_IC.scala:365:7, :427:25
+  assign io_out = sr_array_9;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:453:7, :514:25
+  assign io_valid_out = valid_sr_9;	// Volumes/MacExternal/DevProjects/ScoolProjects/AdderNet-Neural-Network/src/main/scala/Fundamental_IC.scala:453:7, :515:25
 endmodule
 

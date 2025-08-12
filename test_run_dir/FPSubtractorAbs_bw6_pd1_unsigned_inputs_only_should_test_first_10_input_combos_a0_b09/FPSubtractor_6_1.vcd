@@ -1,0 +1,294 @@
+$date
+2025-08-12T18:48+0000
+$end
+$version
+0.2
+$end
+$comment
+
+$end
+$timescale 1ns  $end
+$scope module FPSubtractor_6_1 $end
+ $var wire 6 ! io_in_a $end
+ $var wire 6 " io_in_b $end
+ $var wire 1 # io_valid_in $end
+ $var wire 1 $ io_valid_out $end
+ $var wire 1 & lzc $end
+ $var wire 3 ' manA $end
+ $var wire 2 ( maxExp $end
+ $var wire 3 ) manB $end
+ $var wire 5 * alignedB $end
+ $var wire 5 + alignedA $end
+ $var wire 2 , expDiff $end
+ $var wire 5 - diff $end
+ $var wire 6 . sr_array_0 $end
+ $var wire 1 / clock $end
+ $var wire 3 0 normalizedMant $end
+ $var wire 5 1 aExt $end
+ $var wire 6 2 aVal $end
+ $var wire 1 4 reset $end
+ $var wire 6 5 io_out $end
+ $var wire 7 7 result $end
+ $var wire 4 8 bExt_hi $end
+ $var wire 12 9 normalizedMantFull $end
+ $var wire 4 : result_hi $end
+ $var wire 2 ; expB $end
+ $var wire 2 < expA $end
+ $var wire 4 = aExt_hi $end
+ $var wire 5 > bExt $end
+ $var wire 6 ? bVal $end
+ $var wire 1 A valid_sr_0 $end
+ $var wire 3 B adjustedExp $end
+  $scope module lzc $end
+   $var wire 5 % rev $end
+   $var wire 3 3 io_out $end
+   $var wire 1 6 any $end
+   $var wire 5 @ io_in $end
+  $upscope $end
+$upscope $end
+$enddefinitions $end
+$dumpvars
+04
+b000 B
+b00 <
+06
+b00 ;
+b000000 .
+b000000000000 9
+b000000 2
+b000000 5
+0A
+b00 (
+b00000 %
+b000 3
+b00 ,
+b00000 +
+b00000 *
+b00000 -
+b000000 !
+b0000000 7
+b000000 "
+b00000 1
+b000 '
+b000 )
+b000 0
+b00000 >
+b00000 @
+0#
+0$
+0&
+b000000 ?
+b0000 =
+b0000 :
+b0000 8
+0/
+$end
+#0
+b10000 1
+b101 3
+14
+b1000 8
+b10000 *
+b10000 +
+b1000 =
+b10000 >
+#1
+1/
+#6
+1#
+04
+0/
+#11
+1A
+1$
+1/
+#16
+b00010 @
+b000001 "
+b01000 %
+b001 '
+b10010 +
+b00010 -
+0/
+b10010 1
+b000001 2
+b011 3
+16
+b000000010000 9
+b1001 =
+#21
+1/
+#26
+b00100 @
+b10100 1
+b000010 "
+b000010 2
+b010 3
+b00100 %
+b010 '
+b10100 +
+b00100 -
+b1010 =
+0/
+#31
+1/
+#36
+b00110 @
+b000011 "
+b01100 %
+b011 '
+b10110 +
+b00110 -
+0/
+b100 0
+b10110 1
+b000011 2
+b0000100 7
+b000000011000 9
+b1011 =
+#41
+b000100 5
+b000100 .
+1/
+#46
+b01000 @
+b000100 "
+b00010 %
+b100 '
+b11000 +
+b01000 -
+0/
+b000 0
+b11000 1
+b000100 2
+b001 3
+b0000000 7
+b000000010000 9
+b1100 =
+#51
+b000000 5
+b000000 .
+1/
+#56
+b01010 @
+b000101 "
+b01010 %
+b101 '
+b11010 +
+b01010 -
+0/
+b010 0
+b11010 1
+b000101 2
+b0000010 7
+b000000010100 9
+b1101 =
+#61
+b000010 5
+b000010 .
+1/
+#66
+b01100 @
+b000110 "
+b00110 %
+b110 '
+b11100 +
+b01100 -
+0/
+b100 0
+b11100 1
+b000110 2
+b0000100 7
+b000000011000 9
+b1110 =
+#71
+b000100 5
+b000100 .
+1/
+#76
+b01110 @
+b000111 "
+b01110 %
+b111 '
+b11110 +
+b01110 -
+0/
+b110 0
+b11110 1
+b000111 2
+b0000110 7
+b000000011100 9
+b1111 =
+#81
+b000110 5
+b000110 .
+1/
+#86
+b01000 @
+b001000 "
+b00010 %
+b000 '
+b01 (
+b01000 *
+b10000 +
+b01 ,
+b01000 -
+0/
+b000 0
+b10000 1
+b001000 2
+b0000000 7
+b000000010000 9
+b01 <
+b1000 =
+#91
+b000000 5
+b000000 .
+1/
+#96
+b01010 @
+b001001 "
+b01010 %
+b001 '
+b10010 +
+b01010 -
+0/
+b010 0
+b10010 1
+b001001 2
+b0000010 7
+b000000010100 9
+b1001 =
+#101
+b000010 5
+b000010 .
+1/
+#106
+b00000 @
+b000000 "
+0#
+b00000 %
+b000 '
+b00 (
+b10000 *
+b10000 +
+b00 ,
+b00000 -
+0/
+b000 0
+b10000 1
+b000000 2
+b101 3
+06
+b0000000 7
+b000000000000 9
+b00 <
+b1000 =
+#111
+0A
+0$
+b000000 5
+b000000 .
+1/
+#116
+0/
