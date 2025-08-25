@@ -1,5 +1,5 @@
 $date
-2025-08-12T21:06+0000
+2025-08-23T15:20+0000
 $end
 $version
 0.2
@@ -17,343 +17,396 @@ $scope module FPAdder_4_1 $end
  $var wire 1 & io_valid_in $end
  $var wire 3 ( normFracA $end
  $var wire 3 ) normFracB $end
- $var wire 4 * sr_data_0 $end
- $var wire 4 + expDiffs $end
- $var wire 4 , newExp $end
- $var wire 4 - expDiff $end
- $var wire 1 . reset $end
- $var wire 4 / alignedLarge $end
- $var wire 3 0 eB_eS $end
- $var wire 4 1 result $end
- $var wire 1 2 eB_wide_sign $end
- $var wire 4 3 kCap $end
- $var wire 1 4 carryOut $end
- $var wire 4 5 k $end
- $var wire 4 6 alignedSmall $end
- $var wire 1 8 expAGtB $end
- $var wire 4 9 shiftAmts $end
- $var wire 4 : eA $end
- $var wire 4 ; eB $end
- $var wire 4 < encE $end
- $var wire 4 = eA_wide $end
- $var wire 3 > shiftedFrac $end
- $var wire 1 ? io_valid_out $end
- $var wire 1 @ lzc $end
- $var wire 1 A expBbool $end
- $var wire 3 B eA_eS $end
- $var wire 2 C outFrac $end
- $var wire 1 D clock $end
- $var wire 4 F eB_wide $end
- $var wire 5 G fracSum $end
- $var wire 4 H io_out $end
- $var wire 2 I fracA $end
- $var wire 2 J fracB $end
- $var wire 4 L expOut $end
- $var wire 2 M expB $end
- $var wire 1 N eA_wide_sign $end
- $var wire 2 O expA $end
- $var wire 2 Q outExp $end
+ $var wire 4 * packedSpecial $end
+ $var wire 4 + sr_data_0 $end
+ $var wire 1 , dropHidden $end
+ $var wire 4 - expDiffs $end
+ $var wire 4 . newExp $end
+ $var wire 4 / expDiff $end
+ $var wire 1 0 bFracNZ $end
+ $var wire 1 1 reset $end
+ $var wire 4 2 alignedLarge $end
+ $var wire 3 3 eB_eS $end
+ $var wire 1 4 aIsNaN $end
+ $var wire 4 5 result $end
+ $var wire 1 6 eB_wide_sign $end
+ $var wire 1 7 bIsNaN $end
+ $var wire 1 8 bIsInf $end
+ $var wire 1 9 carryOut $end
+ $var wire 4 : sCap $end
+ $var wire 3 ; preMant $end
+ $var wire 4 < alignedSmall $end
+ $var wire 1 > expAGtB $end
+ $var wire 4 ? shiftAmts $end
+ $var wire 4 @ eA $end
+ $var wire 4 A eB $end
+ $var wire 4 B sRaw $end
+ $var wire 4 C kExp $end
+ $var wire 4 D encE $end
+ $var wire 4 E eA_wide $end
+ $var wire 3 F shiftedFrac $end
+ $var wire 2 G resultNormalExp $end
+ $var wire 1 H io_valid_out $end
+ $var wire 1 I lzc $end
+ $var wire 1 J expBbool $end
+ $var wire 3 K eA_eS $end
+ $var wire 2 L qNaNFrac $end
+ $var wire 1 M anyInfIn $end
+ $var wire 1 N clock $end
+ $var wire 4 P eB_wide $end
+ $var wire 5 Q fracSum $end
+ $var wire 1 R aIsInf $end
+ $var wire 4 S io_out $end
+ $var wire 2 T fracA $end
+ $var wire 1 U anyNaNIn $end
+ $var wire 2 V fracB $end
+ $var wire 1 X aFracNZ $end
+ $var wire 4 Y expOut $end
+ $var wire 2 Z expB $end
+ $var wire 1 [ eA_wide_sign $end
+ $var wire 2 \ expA $end
+ $var wire 4 ] packedNormal $end
+ $var wire 2 _ resultNormalFrac $end
   $scope module lzc $end
    $var wire 3 ' rev $end
-   $var wire 1 7 io_isZero $end
-   $var wire 2 E io_out $end
-   $var wire 1 K any $end
-   $var wire 3 P io_in $end
+   $var wire 1 = io_isZero $end
+   $var wire 2 O io_out $end
+   $var wire 1 W any $end
+   $var wire 3 ^ io_in $end
   $upscope $end
 $upscope $end
 $enddefinitions $end
 $dumpvars
-02
+00
+01
 04
+06
 07
 08
-0?
-0@
-0A
-0D
-0K
+09
+0=
+0>
+0H
+0I
+0J
+0M
 0N
 b0000 "
+0R
 b0000 #
-b0000 ,
+0U
+0W
+0X
 b0000 -
 b0000 *
 b0000 +
+0[
 b0000 5
-b0000 3
-b00000 G
-b0000 1
+b0000 2
+b0000 .
 b0000 /
 b0000 <
-b0000 =
+b000 ^
 b0000 :
-b0000 ;
-b0000 9
-b0000 6
-b000 B
-b0000 L
-b000 P
-b0000 H
-b0000 F
-b000 >
+b00000 Q
+b0000 D
+b0000 E
+b000 F
+b0000 B
+b0000 C
+b0000 @
+b0000 A
+b0000 ?
+b000 K
+b0000 S
+b0000 P
+b000 3
+b0000 ]
+b00 _
+b000 ;
+b0000 Y
 b000 '
 b000 )
 b000 (
+b00 V
+b00 \
 b000 $
-b00 Q
+b00 Z
 b00 O
-b000 0
-b00 I
+b00 T
 0!
-b00 M
+b00 G
 0%
+b00 L
 0&
-b00 J
-b00 E
-0.
-b00 C
+0,
 $end
 #0
-1A
+b1111 P
+11
+b0001 D
 1%
-b11 E
-b1111 F
-17
-b0011 9
-b0001 <
-b1111 =
-1.
+b1111 E
+1J
+b10 L
+1=
+b0011 ?
+b11 O
 #1
-1D
+1N
 #6
-0D
+01
 1&
-0.
+0N
 #11
 1!
-1D
-1?
+1H
+1N
 #16
 b0001 #
-b01 C
 b001 $
-0D
-b10 E
+b1111 D
+b100 F
 b100 '
-b00001 G
 b001 )
-b01 J
-1K
-b1110 ,
-b0001 /
-b001 P
-b0001 1
-b0010 3
-b0010 5
-07
-b0010 9
-b1111 <
-b100 >
+b1110 .
+0N
+b10 O
+10
+b00001 Q
+b0001 2
+b0001 5
+b01 V
+1W
+b001 ;
+0=
+b0001 ]
+b001 ^
+b0010 ?
+b01 _
 #21
-1D
-b0001 H
-b0001 *
+b0001 S
+b0001 +
+1N
 #26
 b0010 #
-b10 C
 b010 $
-0D
-b01 E
+b0000 D
 b010 '
-b00010 G
 b010 )
-b10 J
-b1111 ,
-b0010 /
-b010 P
-b0010 1
-b0001 3
-b0001 5
-b0001 9
-b0000 <
+b1111 .
+0N
+b01 O
+b00010 Q
+b0010 2
+b0010 5
+b10 V
+b010 ;
+b0010 ]
+b010 ^
+b0001 ?
+b10 _
 #31
-1D
-b0010 H
-b0010 *
+b0010 S
+b0010 +
+1N
 #36
 b0011 #
-b11 C
 b011 $
-0D
+b110 F
 b110 '
-b00011 G
 b011 )
-b11 J
-b0011 /
-b011 P
-b0011 1
-b110 >
+0N
+b00011 Q
+b0011 2
+b0011 5
+b11 V
+b011 ;
+b0011 ]
+b011 ^
+b11 _
 #41
-1D
-b0011 H
-b0011 *
+b0011 S
+b0011 +
+1N
 #46
-0A
+b0001 B
+b0001 D
+b100 F
+b01 G
+0J
+0N
+b00 O
+b0000 P
+b00100 Q
+b00 V
+b01 Z
+b0100 ]
+b100 ^
+b00 _
 b0100 #
-b00 C
-b100 $
-0D
-b00 E
-b0000 F
+b010 $
 b001 '
-b00100 G
 b100 )
-b00 J
-b0000 ,
-b01 M
-b0100 /
-b001 0
-b100 P
-b0100 1
-b01 Q
-b0000 3
-b0000 5
-b0000 9
-b0001 <
-b100 >
+1,
+b0000 .
+00
+b0100 2
+b001 3
+b0100 5
+b0001 :
+b100 ;
+b0000 ?
 #51
-1D
-b0100 H
-b0100 *
+b0100 S
+b0100 +
+1N
 #56
 b0101 #
-b01 C
-b101 $
-0D
+b101 F
 b101 '
-b00101 G
 b101 )
-b01 J
-b0101 /
-b101 P
-b0101 1
-b101 >
+0N
+10
+b00101 Q
+b0101 2
+b0101 5
+b01 V
+b101 ;
+b0101 ]
+b101 ^
+b01 _
 #61
-1D
-b0101 H
-b0101 *
+b0101 S
+b0101 +
+1N
 #66
 b0110 #
-b10 C
-b110 $
-0D
+b011 $
+b110 F
 b011 '
-b00110 G
 b110 )
-b10 J
-b0110 /
-b110 P
-b0110 1
-b110 >
+0N
+b00110 Q
+b0110 2
+b0110 5
+b10 V
+b110 ;
+b0110 ]
+b110 ^
+b10 _
 #71
-1D
-b0110 H
-b0110 *
+b0110 S
+b0110 +
+1N
 #76
 b0111 #
-b11 C
-b111 $
-0D
+b111 F
 b111 '
-b00111 G
 b111 )
-b11 J
-b0111 /
-b111 P
-b0111 1
-b111 >
+0N
+b00111 Q
+b0111 2
+b0111 5
+b11 V
+b111 ;
+b0111 ]
+b111 ^
+b11 _
 #81
-1D
-b0111 H
-b0111 *
+b0111 S
+b0111 +
+1N
 #86
-b00 C
-0D
-b0001 F
-b00100 G
-b00 J
-b0001 L
-b10 M
-b100 P
-b10 Q
+b0001 A
+b0000 B
+b1111 C
+b0010 D
+b100 F
+b10 G
+0N
+b0001 P
+b00100 Q
+b00 V
+b0001 Y
+b10 Z
+b1000 ]
+b100 ^
+b00 _
 b1000 #
-b000 $
+b100 $
 b001 '
 b100 )
-b1111 +
-b0001 ,
-b0001 -
-b0100 /
-b010 0
-b1000 1
-b0011 3
-b1111 5
-b0001 ;
-b0010 <
-b100 >
+b1111 -
+b0001 .
+b0001 /
+00
+b0100 2
+b010 3
+b1000 5
+b0000 :
+b100 ;
 #91
-1D
-b1000 H
-b1000 *
+b1000 S
+b1000 +
+1N
 #96
-b101 P
-b1001 1
 b1001 #
-b01 C
-0D
+b101 $
+b101 F
 b101 '
-b00101 G
 b101 )
-b01 J
-b101 >
-b0101 /
+0N
+10
+b00101 Q
+b0101 2
+b1001 5
+b01 V
+b101 ;
+b1001 ]
+b101 ^
+b01 _
 #101
-1D
-b1001 H
-b1001 *
+b1001 S
+b1001 +
+1N
 #106
-1A
-b00 C
-0D
-b11 E
-b1111 F
-b00000 G
-b00 J
-0K
-b0000 L
-b00 M
-b000 P
-b00 Q
+b0000 A
+b0000 C
+b0001 D
+b000 F
+b00 G
+1J
+0N
+b11 O
+b1111 P
+b00000 Q
+b00 V
+0W
+b0000 Y
+b00 Z
+b0000 ]
+b000 ^
+b00 _
 b0000 #
+b000 $
 0&
 b000 '
 b000 )
-b0000 +
-b0000 ,
+0,
 b0000 -
+b0000 .
 b0000 /
-b000 0
-b0000 1
-b0000 3
+00
+b0000 2
+b000 3
 b0000 5
-17
-b0011 9
-b0000 ;
-b0001 <
-b000 >
+b000 ;
+1=
+b0011 ?
 #111
 0!
-1D
-0?
+0H
+1N
 #116
-0D
+0N

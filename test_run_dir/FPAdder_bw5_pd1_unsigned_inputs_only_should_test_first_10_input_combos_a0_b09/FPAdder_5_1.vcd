@@ -1,5 +1,5 @@
 $date
-2025-08-12T18:47+0000
+2025-08-23T16:09+0000
 $end
 $version
 0.2
@@ -9,363 +9,389 @@ $comment
 $end
 $timescale 1ns  $end
 $scope module FPAdder_5_1 $end
- $var wire 5 ! io_in_a $end
- $var wire 5 " io_in_b $end
- $var wire 4 # den $end
- $var wire 1 $ expAbool $end
- $var wire 5 % sr_data_0 $end
- $var wire 1 & printf_17 $end
- $var wire 2 ' expDiffs $end
- $var wire 1 ( printf_13 $end
- $var wire 1 ) printf_14 $end
- $var wire 1 * printf_15 $end
- $var wire 1 + printf_16 $end
- $var wire 2 , expDiff $end
- $var wire 1 - printf_10 $end
- $var wire 1 . printf_11 $end
- $var wire 1 / printf_12 $end
- $var wire 5 0 alignedLarge $end
- $var wire 5 1 result $end
- $var wire 1 2 carryOut $end
- $var wire 3 3 k $end
- $var wire 5 4 alignedSmall $end
- $var wire 4 5 shiftAmts $end
- $var wire 2 6 eA $end
- $var wire 2 7 eB $end
- $var wire 3 8 encE $end
- $var wire 4 9 shiftedFrac $end
- $var wire 1 : io_valid_out $end
- $var wire 1 ; lzc $end
- $var wire 1 < expBbool $end
- $var wire 1 = printf_9 $end
- $var wire 1 > printf_8 $end
- $var wire 1 ? printf_7 $end
- $var wire 1 @ printf_6 $end
- $var wire 1 B printf_1 $end
- $var wire 1 C printf_5 $end
- $var wire 6 D fracSum $end
- $var wire 1 E printf_4 $end
- $var wire 1 F printf_3 $end
- $var wire 1 G printf_2 $end
- $var wire 1 H printf $end
- $var wire 3 I expOut $end
- $var wire 1 J sr_valid_0 $end
- $var wire 1 K io_valid_in $end
- $var wire 4 M normFracA $end
- $var wire 4 N normFracB $end
- $var wire 3 O newExp $end
- $var wire 1 P reset $end
- $var wire 3 Q kCap $end
- $var wire 3 R eClamp $end
- $var wire 1 T expAGtB $end
- $var wire 3 U outFrac $end
- $var wire 1 V clock $end
- $var wire 5 W io_out $end
- $var wire 3 X fracA $end
- $var wire 3 Y fracB $end
- $var wire 2 [ expB $end
+ $var wire 1 ! sr_valid_0 $end
+ $var wire 5 " io_in_a $end
+ $var wire 5 # io_in_b $end
+ $var wire 4 $ den $end
+ $var wire 1 % expAbool $end
+ $var wire 1 & io_valid_in $end
+ $var wire 4 ( normFracA $end
+ $var wire 4 ) normFracB $end
+ $var wire 5 * packedSpecial $end
+ $var wire 5 + sr_data_0 $end
+ $var wire 1 , dropHidden $end
+ $var wire 4 - expDiffs $end
+ $var wire 4 . newExp $end
+ $var wire 4 / expDiff $end
+ $var wire 1 0 bFracNZ $end
+ $var wire 1 1 reset $end
+ $var wire 5 2 alignedLarge $end
+ $var wire 3 3 eB_eS $end
+ $var wire 1 4 aIsNaN $end
+ $var wire 5 5 result $end
+ $var wire 1 6 eB_wide_sign $end
+ $var wire 1 7 bIsNaN $end
+ $var wire 1 8 bIsInf $end
+ $var wire 1 9 carryOut $end
+ $var wire 4 : sCap $end
+ $var wire 4 ; preMant $end
+ $var wire 5 < alignedSmall $end
+ $var wire 1 > expAGtB $end
+ $var wire 4 ? shiftAmts $end
+ $var wire 4 @ eA $end
+ $var wire 4 A eB $end
+ $var wire 4 B sRaw $end
+ $var wire 4 C kExp $end
+ $var wire 4 D encE $end
+ $var wire 4 E eA_wide $end
+ $var wire 4 F shiftedFrac $end
+ $var wire 2 G resultNormalExp $end
+ $var wire 1 H io_valid_out $end
+ $var wire 1 I lzc $end
+ $var wire 1 J expBbool $end
+ $var wire 3 K eA_eS $end
+ $var wire 3 L qNaNFrac $end
+ $var wire 1 M anyInfIn $end
+ $var wire 1 N clock $end
+ $var wire 4 P eB_wide $end
+ $var wire 6 Q fracSum $end
+ $var wire 1 R aIsInf $end
+ $var wire 5 S io_out $end
+ $var wire 3 T fracA $end
+ $var wire 1 U anyNaNIn $end
+ $var wire 3 V fracB $end
+ $var wire 1 X aFracNZ $end
+ $var wire 4 Y expOut $end
+ $var wire 2 Z expB $end
+ $var wire 1 [ eA_wide_sign $end
  $var wire 2 \ expA $end
- $var wire 2 ^ outExp $end
+ $var wire 5 ] packedNormal $end
+ $var wire 3 _ resultNormalFrac $end
   $scope module lzc $end
-   $var wire 3 A io_out $end
-   $var wire 4 L rev $end
-   $var wire 1 S io_isZero $end
-   $var wire 1 Z any $end
-   $var wire 4 ] io_in $end
+   $var wire 4 ' rev $end
+   $var wire 1 = io_isZero $end
+   $var wire 3 O io_out $end
+   $var wire 1 W any $end
+   $var wire 4 ^ io_in $end
   $upscope $end
 $upscope $end
 $enddefinitions $end
 $dumpvars
-02
-b00 7
-b00 6
-0:
-0;
-0<
+00
+01
+04
+06
+07
+08
+09
 0=
 0>
-b00000 !
-0?
-0@
+b00000 #
 b00000 "
-0B
-b00000 %
-b00 '
-0C
-0E
-b00 ,
-0F
-0G
 0H
+b00000 +
+0I
+b00000 *
 0J
-0K
-b00000 1
-b00000 0
-0P
-b0000 #
-0S
-b00000 4
-0T
-0V
-0Z
-b0000 5
-b000 Y
-b000 X
-b000 R
-b000 U
-b0000 9
-b000000 D
-b000 I
-b00000 W
-b0000 L
+0M
+0N
+b0000 $
+b00000 2
+0R
+b00000 5
+0U
+0W
+0X
+b0000 -
+b000000 Q
+0[
+b00000 <
+b0000 (
+b0000 )
+b0000 '
+b000 V
+b0000 .
+b0000 /
+b000 T
+b000 _
+b0000 :
+b0000 ;
+b0000 D
+b00000 S
+b0000 E
+b0000 B
+b0000 C
+b0000 @
+b0000 A
+b0000 ?
 b000 O
-b0000 M
-b000 Q
-b000 8
+b00000 ]
+b000 K
+b0000 F
+b000 L
+b0000 P
 b000 3
-b0000 N
-b0000 ]
-b000 A
-b00 ^
+b0000 Y
 b00 \
-b00 [
-0$
+b0000 ^
+b00 Z
+0!
+b00 G
+0%
 0&
-0(
-0)
-0*
-0+
-0-
-0.
-0/
+0,
 $end
 #0
-1P
-b100 A
-1S
-1$
-b0100 5
-b001 8
-1<
-#1
-1V
-#6
-0P
-0V
-1K
-#11
-1V
-1:
+b1111 P
+11
+b0001 D
+1%
+b1111 E
 1J
+b100 L
+1=
+b0100 ?
+b100 O
+#1
+1N
+#6
+01
+1&
+0N
+#11
+1!
+1H
+1N
 #16
-b011 A
-b00001 "
-b0001 #
-b000001 D
-b1000 L
-b0001 N
-b101 O
-b00001 0
-b00001 1
-b011 Q
-b101 R
-b011 3
-0S
-b0011 5
-b001 U
-0V
-b110 8
-b1000 9
-b001 Y
-1Z
-b0001 ]
+b00001 #
+b0001 $
+b1110 D
+b1000 F
+b1000 '
+b0001 )
+b1101 .
+0N
+b011 O
+10
+b000001 Q
+b00001 2
+b00001 5
+b001 V
+1W
+b0001 ;
+0=
+b00001 ]
+b0001 ^
+b0011 ?
+b001 _
 #21
-b00001 %
-1V
-b00001 W
+b00001 S
+b00001 +
+1N
 #26
-b010 A
-b00010 "
-b0010 #
-b000010 D
-b0100 L
-b0010 N
-b110 O
-b00010 0
-b00010 1
-b010 Q
-b110 R
-b010 3
-b0010 5
-b010 U
-0V
-b111 8
-b010 Y
-b0010 ]
+b00010 #
+b0010 $
+b1111 D
+b0100 '
+b0010 )
+b1110 .
+0N
+b010 O
+b000010 Q
+b00010 2
+b00010 5
+b010 V
+b0010 ;
+b00010 ]
+b0010 ^
+b0010 ?
+b010 _
 #31
-b00010 %
-1V
-b00010 W
+b00010 S
+b00010 +
+1N
 #36
-b00011 "
-b0011 #
-b000011 D
-b1100 L
-b0011 N
-b00011 0
-b00011 1
-b011 U
-0V
-b1100 9
-b011 Y
-b0011 ]
+b00011 #
+b0011 $
+b1100 F
+b1100 '
+b0011 )
+0N
+b000011 Q
+b00011 2
+b00011 5
+b011 V
+b0011 ;
+b00011 ]
+b0011 ^
+b011 _
 #41
-b00011 %
-1V
-b00011 W
+b00011 S
+b00011 +
+1N
 #46
-b001 A
-b00100 "
-b0100 #
-b000100 D
-b0010 L
-b0100 N
-b111 O
-b00100 0
-b00100 1
-b001 Q
-b111 R
-b001 3
-b0001 5
-b100 U
-0V
-b000 8
-b1000 9
-b100 Y
-b0100 ]
+b00100 #
+b0100 $
+b0000 D
+b1000 F
+b0010 '
+b0100 )
+b1111 .
+0N
+b001 O
+b000100 Q
+b00100 2
+b00100 5
+b100 V
+b0100 ;
+b00100 ]
+b0100 ^
+b0001 ?
+b100 _
 #51
-b00100 %
-1V
-b00100 W
+b00100 S
+b00100 +
+1N
 #56
-b00101 "
-b0101 #
-b000101 D
-b1010 L
-b0101 N
-b00101 0
-b00101 1
-b101 U
-0V
-b1010 9
-b101 Y
-b0101 ]
+b00101 #
+b0101 $
+b1010 F
+b1010 '
+b0101 )
+0N
+b000101 Q
+b00101 2
+b00101 5
+b101 V
+b0101 ;
+b00101 ]
+b0101 ^
+b101 _
 #61
-b00101 %
-1V
-b00101 W
+b00101 S
+b00101 +
+1N
 #66
-b00110 "
-b0110 #
-b000110 D
-b0110 L
-b0110 N
-b00110 0
-b00110 1
-b110 U
-0V
-b1100 9
-b110 Y
-b0110 ]
+b00110 #
+b0110 $
+b1100 F
+b0110 '
+b0110 )
+0N
+b000110 Q
+b00110 2
+b00110 5
+b110 V
+b0110 ;
+b00110 ]
+b0110 ^
+b110 _
 #71
-b00110 %
-1V
-b00110 W
+b00110 S
+b00110 +
+1N
 #76
-b00111 "
-b0111 #
-b000111 D
-b1110 L
-b0111 N
-b00111 0
-b00111 1
-b111 U
-0V
-b1110 9
-b111 Y
-b0111 ]
+b00111 #
+b0111 $
+b1110 F
+b1110 '
+b0111 )
+0N
+b000111 Q
+b00111 2
+b00111 5
+b111 V
+b0111 ;
+b00111 ]
+b0111 ^
+b111 _
 #81
-b00111 %
-1V
-b00111 W
+b00111 S
+b00111 +
+1N
 #86
-b000 A
-b01000 "
-b1000 #
-b001000 D
-b0001 L
-b1000 N
-b000 O
-b01000 0
-b01000 1
-b000 Q
-b000 R
-b000 3
-b0000 5
-b000 U
-0V
-b001 8
-b1000 9
-b000 Y
-b01 [
-0<
-b1000 ]
-b01 ^
-#91
-b01000 %
-1V
-b01000 W
-#96
-b01001 "
-b1001 #
-b001001 D
-b1001 L
-b1001 N
-b01001 0
-b01001 1
-b001 U
-0V
-b1001 9
-b001 Y
-b1001 ]
-#101
-b01001 %
-1V
-b01001 W
-#106
-b100 A
-b00000 "
-b0000 #
-b000000 D
-0K
-b0000 L
-b0000 N
-b00000 0
-b00000 1
-1S
-b0100 5
-b000 U
-0V
-b0000 9
-b000 Y
-0Z
-b00 [
-1<
-b0000 ]
-b00 ^
-#111
-1V
-0:
+b0001 B
+b0001 D
+b1000 F
+b01 G
 0J
+0N
+b000 O
+b0000 P
+b001000 Q
+b000 V
+b01 Z
+b01000 ]
+b1000 ^
+b000 _
+b01000 #
+b0100 $
+b0001 '
+b1000 )
+1,
+b0000 .
+00
+b01000 2
+b001 3
+b01000 5
+b0001 :
+b1000 ;
+b0000 ?
+#91
+b01000 S
+b01000 +
+1N
+#96
+b01001 #
+b1001 F
+b1001 '
+b1001 )
+0N
+10
+b001001 Q
+b01001 2
+b01001 5
+b001 V
+b1001 ;
+b01001 ]
+b1001 ^
+b001 _
+#101
+b01001 S
+b01001 +
+1N
+#106
+b0000 B
+b0000 F
+b00 G
+1J
+0N
+b100 O
+b1111 P
+b000000 Q
+b000 V
+0W
+b00 Z
+b00000 ]
+b0000 ^
+b000 _
+b00000 #
+b0000 $
+0&
+b0000 '
+b0000 )
+0,
+00
+b00000 2
+b000 3
+b00000 5
+b0000 :
+b0000 ;
+1=
+b0100 ?
+#111
+0!
+0H
+1N
 #116
-0V
+0N

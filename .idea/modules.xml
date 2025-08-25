@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/AdderNet-Neural-Network/Fundamental-IC-ChiselHCL.iml" filepath="$PROJECT_DIR$/.idea/modules/AdderNet-Neural-Network/Fundamental-IC-ChiselHCL.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/AdderNet-Neural-Network/Fundamental-IC-ChiselHCL.Fundamental-IC-ChiselHCL-build.iml" filepath="$PROJECT_DIR$/.idea/modules/AdderNet-Neural-Network/Fundamental-IC-ChiselHCL.Fundamental-IC-ChiselHCL-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AdderNet-Neural-Network/Fundamental-IC-ChiselHCL.main.iml" filepath="$PROJECT_DIR$/.idea/modules/AdderNet-Neural-Network/Fundamental-IC-ChiselHCL.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AdderNet-Neural-Network/Fundamental-IC-ChiselHCL.test.iml" filepath="$PROJECT_DIR$/.idea/modules/AdderNet-Neural-Network/Fundamental-IC-ChiselHCL.test.iml" />
     </modules>
   </component>
 </project>

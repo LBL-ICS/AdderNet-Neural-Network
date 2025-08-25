@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ScalaCompilerConfiguration">
-    <profile name="sbt 1" modules="addernet-neural-network_6415" />
-    <profile name="sbt 2" modules="Fundamental-IC-ChiselHCL">
+    <option name="separateProdTestSources" value="true" />
+    <profile name="sbt 1" modules="Fundamental-IC-ChiselHCL,addernet-neural-network_6415" />
+    <profile name="sbt 2" modules="Fundamental-IC-ChiselHCL.main,Fundamental-IC-ChiselHCL.test">
       <plugins>
         <plugin path="$USER_HOME$/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/chipsalliance/chisel-plugin_2.13.12/6.0.0/chisel-plugin_2.13.12-6.0.0.jar" />
       </plugins>

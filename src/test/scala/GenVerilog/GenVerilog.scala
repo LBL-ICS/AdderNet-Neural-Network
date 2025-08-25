@@ -6,12 +6,17 @@ import org.scalatest.flatspec.AnyFlatSpec
 import chiseltest.simulator.WriteVcdAnnotation
 import Fundamental_IC._
 import FP_submodules._
+import chisel3.stage.ChiselGeneratorAnnotation
+import circt.stage.{ChiselStage, FirtoolOption}
 import org.scalatest.matchers.must.Matchers  // your modules
+import SAD_Code._
 
-
-object Main extends App {
-  emitVerilog(new FPAdder(6, 10 ))
-  emitVerilog(new FPSubtractorAbs(6, 10))
-
-
+object main extends App {
+  (new ChiselStage).execute(
+    Array("--target", "systemverilog", "--target-dir", "verification/dut"),
+    Seq(ChiselGeneratorAnnotation(() => new SAD2(6,1,3,4)),
+      FirtoolOption("--disable-all-randomization"),
+      FirtoolOption("-strip-debug-info")
+    )
+  )
 }
