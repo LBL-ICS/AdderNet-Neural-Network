@@ -9,7 +9,7 @@ import scala.language.postfixOps
 import FP_submodules._
 
 
-class SAD2 (val bw: Int, val pd: Int, val vecLen: Int = 4, val adderExp: Int) extends Module {
+class SAD2 (val bw: Int, val pd: Int, val vecLen: Int, val adderExp: Int) extends Module {
   override def desiredName: String = s"SAD_bw${bw}_e${adderExp}m${bw - adderExp}"
   require(bw == 4 || bw == 5 || bw == 6)
   val io = IO(new Bundle {
