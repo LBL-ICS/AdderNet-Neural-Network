@@ -107,9 +107,9 @@ class FPAddTest extends AnyFlatSpec with ChiselScalatestTester {
 
   private def bN(x: Int, w: Int) = x.toBinaryString.reverse.padTo(w, '0').reverse
 
-  behavior of s"FPAdder (bw=$bw, pd=$pd, exp=$expSize) — IEEE mode"
+  behavior of s"FPAdder (bw=$bw, pd=$pd, exp=$expSize)"
 
-  it should "print compact random checks (IEEE helpers)" in {
+  it should "do random checks" in {
     test(new FPAdder2(bw, pd, expSize)) { dut =>
       val rnd = new scala.util.Random(0xC0FFEE)
       val N   = 64
@@ -162,7 +162,7 @@ class FPAddTest extends AnyFlatSpec with ChiselScalatestTester {
     }
   }
 
-  it should "print compact exhaustive checks (16x16, IEEE helpers)" in {
+  it should "print exhaustive checks" in {
     test(new FPAdder2(bw, pd, expSize)) { dut =>
       val Q = scala.collection.mutable.Queue.empty[(Int, Int, Int)]
       var cycle = 0
@@ -308,9 +308,9 @@ class FPSubTest extends AnyFlatSpec with ChiselScalatestTester {
 
   private def bN(x: Int, w: Int) = x.toBinaryString.reverse.padTo(w, '0').reverse
 
-  behavior of s"FPSubtractorAbs (bw=$bw, pd=$pd, exp=$expSize) — IEEE mode"
+  behavior of s"FPSubtractorAbs (bw=$bw, pd=$pd, exp=$expSize)"
 
-  it should "print compact random checks (IEEE helpers)" in {
+  it should "print random checks" in {
     test(new FPSubtractorAbs2(bw, pd, expSize)) { dut =>
       val rnd = new scala.util.Random(0xC0FFEE)
       val N   = 64
@@ -366,7 +366,7 @@ class FPSubTest extends AnyFlatSpec with ChiselScalatestTester {
     }
   }
 
-  it should "print compact exhaustive checks (IEEE helpers)" in {
+  it should "print exhaustive checks" in {
     test(new FPSubtractorAbs2(bw, pd, expSize)) { dut =>
       val Q = scala.collection.mutable.Queue.empty[(Int, Int, Int)]
       var cycle = 0
@@ -598,7 +598,7 @@ class SAD2Random_with_NaN extends AnyFlatSpec with ChiselScalatestTester {
     reduceStage(diffsEncoded)
   }
 
-  it should "run random vectors, print inputs/outputs, and match the reference model" in {
+  it should "run random vectors" in {
     test(new SAD2(bw, pd, vecLen, adderExp)).withAnnotations(Seq(WriteVcdAnnotation)) { dut =>
       val rnd  = new scala.util.Random(0xD15EA5E)
       val N    = 300
@@ -814,7 +814,7 @@ class SAD2Random_no_Nan extends AnyFlatSpec with ChiselScalatestTester {
     reduceStage(diffsEncoded)
   }
 
-  it should "run random vectors (finite-only inputs), print I/Os, and match the reference model" in {
+  it should "run random vectors, no Nan/Inf inputs" in {
     test(new SAD2(bw, pd, vecLen, adderExp)).withAnnotations(Seq(WriteVcdAnnotation)) { dut =>
       val rnd  = new scala.util.Random(0xD15EA5E)
       val N    = 300
