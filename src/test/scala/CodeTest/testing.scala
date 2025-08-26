@@ -670,7 +670,7 @@ class SAD2Random_no_Nan extends AnyFlatSpec with ChiselScalatestTester {
 
 
   val bw       = 5
-  val adderExp = 3
+  val adderExp = 2
   val pd       = 1
   val vecLen   = 3
 
