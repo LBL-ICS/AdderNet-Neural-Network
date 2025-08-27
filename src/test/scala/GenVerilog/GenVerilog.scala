@@ -14,7 +14,7 @@ import SAD_Code._
 object main extends App {
   (new ChiselStage).execute(
     Array("--target", "systemverilog", "--target-dir", "verification/dut"),
-    Seq(ChiselGeneratorAnnotation(() => new SAD2(6,1,3,4)),
+    Seq(ChiselGeneratorAnnotation(() => new SAD(6,1,3,4)),
       FirtoolOption("--disable-all-randomization"),
       FirtoolOption("-strip-debug-info")
     )

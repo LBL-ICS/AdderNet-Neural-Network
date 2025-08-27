@@ -9,7 +9,7 @@ import scala.language.postfixOps
 import FP_submodules._
 
 
-class SAD2 (val bw: Int, val pd: Int, val vecLen: Int, val adderExp: Int) extends Module {
+class SAD (val bw: Int, val pd: Int, val vecLen: Int, val adderExp: Int) extends Module {
   override def desiredName: String = s"SAD_bw${bw}_e${adderExp}m${bw - adderExp}"
   require(bw == 4 || bw == 5 || bw == 6)
   val io = IO(new Bundle {
@@ -25,7 +25,7 @@ class SAD2 (val bw: Int, val pd: Int, val vecLen: Int, val adderExp: Int) extend
   val Sub_Wire = Wire(Vec(vecLen, UInt(bw.W)))
   val Sub_valid_wire = Wire(Vec(vecLen, Bool()))
   for (i <- 0 until vecLen) {
-    val SubInst = Module(new FPSubtractorAbs2(bw, pd, adderExp ))
+    val SubInst = Module(new FPSubtractorAbs(bw, pd, adderExp ))
     SubInst.io.in_a := io.in_vec_a(i)
     SubInst.io.in_b := io.in_vec_b(i)
     SubInst.io.valid_in := io.valid_in
@@ -43,7 +43,7 @@ class SAD2 (val bw: Int, val pd: Int, val vecLen: Int, val adderExp: Int) extend
 
     for (h <- 0 until layerSize) {
       if (2 * h + 1 < currentlayer.length) {
-        val adderInst = Module(new FPAdder2(bw, pd, adderExp ))
+        val adderInst = Module(new FPAdder(bw, pd, adderExp ))
         adderInst.io.in_a := currentlayer(2 * h)
         adderInst.io.in_b := currentlayer(2 * h + 1)
         adderInst.io.valid_in := currentValid(2 * h) && currentValid(2 * h + 1)

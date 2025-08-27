@@ -18,7 +18,7 @@ class LZC(val w: Int) extends Module {
   io.out    := Mux(any, PriorityEncoder(rev), w.U)
 }
 
-class FPSubtractorAbs2(val bw: Int, val pd: Int, val exp: Int) extends Module {
+class FPSubtractorAbs(val bw: Int, val pd: Int, val exp: Int) extends Module {
   override def desiredName: String = s"FPSubtractorAbs_${bw}_${pd}"
   val io = IO(new Bundle {
     val in_a      = Input(UInt(bw.W))
@@ -220,7 +220,7 @@ class FPSubtractorAbs2(val bw: Int, val pd: Int, val exp: Int) extends Module {
   io.out       := sr_data(pd - 1)
 }
 
-class FPAdder2(val bw: Int, val pd: Int, val exp: Int) extends Module {
+class FPAdder(val bw: Int, val pd: Int, val exp: Int) extends Module {
   override def desiredName: String = s"FPAdder_${bw}_${pd}"
   val io = IO(new Bundle {
     val in_a     = Input(UInt(bw.W))

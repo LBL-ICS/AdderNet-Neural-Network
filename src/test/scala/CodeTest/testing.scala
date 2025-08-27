@@ -110,7 +110,7 @@ class FPAddTest extends AnyFlatSpec with ChiselScalatestTester {
   behavior of s"FPAdder (bw=$bw, pd=$pd, exp=$expSize)"
 
   it should "do random checks" in {
-    test(new FPAdder2(bw, pd, expSize)) { dut =>
+    test(new FPAdder(bw, pd, expSize)) { dut =>
       val rnd = new scala.util.Random(0xC0FFEE)
       val N   = 64
       val Q   = scala.collection.mutable.Queue.empty[(Int, Int, Int)]
@@ -163,7 +163,7 @@ class FPAddTest extends AnyFlatSpec with ChiselScalatestTester {
   }
 
   it should "print exhaustive checks" in {
-    test(new FPAdder2(bw, pd, expSize)) { dut =>
+    test(new FPAdder(bw, pd, expSize)) { dut =>
       val Q = scala.collection.mutable.Queue.empty[(Int, Int, Int)]
       var cycle = 0
 
@@ -213,8 +213,8 @@ class FPAddTest extends AnyFlatSpec with ChiselScalatestTester {
 class FPSubTest extends AnyFlatSpec with ChiselScalatestTester {
 
 
-  val bw      = 5
-  val expSize = 2
+  val bw      = 6
+  val expSize = 4
   val pd      = 1
 
   private val biasCalc = (1 << (expSize - 1)) - 1
@@ -311,7 +311,7 @@ class FPSubTest extends AnyFlatSpec with ChiselScalatestTester {
   behavior of s"FPSubtractorAbs (bw=$bw, pd=$pd, exp=$expSize)"
 
   it should "print random checks" in {
-    test(new FPSubtractorAbs2(bw, pd, expSize)) { dut =>
+    test(new FPSubtractorAbs(bw, pd, expSize)) { dut =>
       val rnd = new scala.util.Random(0xC0FFEE)
       val N   = 64
       val Q   = scala.collection.mutable.Queue.empty[(Int, Int, Int)]
@@ -367,7 +367,7 @@ class FPSubTest extends AnyFlatSpec with ChiselScalatestTester {
   }
 
   it should "print exhaustive checks" in {
-    test(new FPSubtractorAbs2(bw, pd, expSize)) { dut =>
+    test(new FPSubtractorAbs(bw, pd, expSize)) { dut =>
       val Q = scala.collection.mutable.Queue.empty[(Int, Int, Int)]
       var cycle = 0
 
@@ -419,7 +419,7 @@ class FPSubTest extends AnyFlatSpec with ChiselScalatestTester {
 
 class SADTest extends AnyFlatSpec with ChiselScalatestTester {
   "module" should "perform SAD" in {
-    test(new SAD2(5, 1, 3, 2)) { dut =>
+    test(new SAD(5, 1, 3, 2)) { dut =>
       dut.io.in_vec_a(0).poke("b01110".U)
       dut.io.in_vec_a(1).poke("b00100".U)
       dut.io.in_vec_a(2).poke("b00100".U)
@@ -445,7 +445,7 @@ class SADTest extends AnyFlatSpec with ChiselScalatestTester {
   }
 }
 
-class SAD2Random_with_NaN extends AnyFlatSpec with ChiselScalatestTester {
+class SADRandom_with_NaN extends AnyFlatSpec with ChiselScalatestTester {
 
 
   val bw       = 5
@@ -453,7 +453,7 @@ class SAD2Random_with_NaN extends AnyFlatSpec with ChiselScalatestTester {
   val pd       = 1
   val vecLen   = 3
 
-  behavior of s"SAD2(bw=$bw, exp=$adderExp, pd=$pd, vecLen=$vecLen)"
+  behavior of s"SAD(bw=$bw, exp=$adderExp, pd=$pd, vecLen=$vecLen)"
 
 
   private val expSize   = adderExp
@@ -599,7 +599,7 @@ class SAD2Random_with_NaN extends AnyFlatSpec with ChiselScalatestTester {
   }
 
   it should "run random vectors" in {
-    test(new SAD2(bw, pd, vecLen, adderExp)).withAnnotations(Seq(WriteVcdAnnotation)) { dut =>
+    test(new SAD(bw, pd, vecLen, adderExp)).withAnnotations(Seq(WriteVcdAnnotation)) { dut =>
       val rnd  = new scala.util.Random(0xD15EA5E)
       val N    = 300
 
@@ -666,7 +666,7 @@ class SAD2Random_with_NaN extends AnyFlatSpec with ChiselScalatestTester {
   }
 }
 
-class SAD2Random_no_Nan extends AnyFlatSpec with ChiselScalatestTester {
+class SADRandom_no_Nan extends AnyFlatSpec with ChiselScalatestTester {
 
 
   val bw       = 5
@@ -674,7 +674,7 @@ class SAD2Random_no_Nan extends AnyFlatSpec with ChiselScalatestTester {
   val pd       = 1
   val vecLen   = 3
 
-  behavior of s"SAD2(bw=$bw, exp=$adderExp, pd=$pd, vecLen=$vecLen)"
+  behavior of s"SAD(bw=$bw, exp=$adderExp, pd=$pd, vecLen=$vecLen)"
 
   private val expSize   = adderExp
   private val fracWidth = bw - expSize
@@ -815,7 +815,7 @@ class SAD2Random_no_Nan extends AnyFlatSpec with ChiselScalatestTester {
   }
 
   it should "run random vectors, no Nan/Inf inputs" in {
-    test(new SAD2(bw, pd, vecLen, adderExp)).withAnnotations(Seq(WriteVcdAnnotation)) { dut =>
+    test(new SAD(bw, pd, vecLen, adderExp)).withAnnotations(Seq(WriteVcdAnnotation)) { dut =>
       val rnd  = new scala.util.Random(0xD15EA5E)
       val N    = 300
 
